@@ -68,22 +68,34 @@ h1 {
 h1 + p {
   color: var(--gray40);
 }
+h1 ~ ol {
+  color: var(--gray20);
+}
 h2 {
   color: var(--gray40);
   font-size: 2rem;
   /* 32px/16px=2rem a diferencia de em, rem toma el tamaño base al 
   padre mas grande del DOM en este caso al html que tiene por defecto 16pxs*/
 }
+h3 {
+  font-size: 1.5rem;
+}
 h3,
 p {
   color: var(--gray20);
 }
-h3 {
-  font-size: 1.5rem;
-}
-h1 ~ ol {
-  color: var(--gray20);
-}
 h3 + ul > li {
   color: var(--gray20);
+}
+.setup > h3::before,
+.conceptos > h3::before {
+  content: "-";
+}
+.setup > h3::after,
+.conceptos > h3::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: var(--gray20);
+  display: inline-block;
 }
