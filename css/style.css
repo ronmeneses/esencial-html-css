@@ -1,5 +1,6 @@
 nav {
   color: #616161;
+  font-size: 14px;
 }
 nav a {
   color: #616161;
@@ -7,16 +8,24 @@ nav a {
 }
 h1 {
   color: #212121;
+  font-size: 3.75em;
+  /* 60px/16px=3.75em */
 }
 h1 + p {
   color: #212121;
 }
 h2 {
   color: #212121;
+  font-size: 2rem;
+  /* 32px/16px=2rem a diferencia de em, rem toma el tamaño base al 
+  padre mas grande del DOM en este caso al html que tiene por defecto 16pxs*/
 }
 h3,
 p {
   color: #424242;
+}
+h3 {
+  font-size: 1.5rem;
 }
 h1 ~ ol {
   color: #424242;
