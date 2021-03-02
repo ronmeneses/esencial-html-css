@@ -1,44 +1,48 @@
 :root {
   font-size: 16px;
+  --gray40: #212121;
+  --gray30: #212429;
+  --gray20: #424242;
+  --gray10: #616161;
 }
 header {
-  color: #616161;
+  color: var(--gray10);
   font-size: 14px;
 }
 nav a {
-  color: #616161;
+  color: var(--gray10);
   text-decoration: none;
 }
 nav a:hover {
-  color: #212121;
+  color: var(--gray40);
 }
 nav details summary {
   font-weight: bold;
 }
 h1 {
-  color: #212121;
+  color: var(--gray40);
   font-size: 3.75em;
   /* 60px/16px=3.75em */
 }
 h1 + p {
-  color: #212121;
+  color: var(--gray40);
 }
 h2 {
-  color: #212121;
+  color: var(--gray40);
   font-size: 2rem;
   /* 32px/16px=2rem a diferencia de em, rem toma el tamaño base al 
   padre mas grande del DOM en este caso al html que tiene por defecto 16pxs*/
 }
 h3,
 p {
-  color: #424242;
+  color: var(--gray20);
 }
 h3 {
   font-size: 1.5rem;
 }
 h1 ~ ol {
-  color: #424242;
+  color: var(--gray20);
 }
 h3 + ul > li {
-  color: #424242;
+  color: var(--gray20);
 }
