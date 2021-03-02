@@ -68,7 +68,7 @@ h1 {
 h1 + p {
   color: var(--gray40);
 }
-h1 ~ ol {
+.modeloDeCaja > ol {
   color: var(--gray20);
 }
 h2 {
@@ -87,9 +87,21 @@ p {
 h3 + ul > li {
   color: var(--gray20);
 }
+/* La numeracion con css para cada una de nuestras secciones */
+/* reseteamos el contador en cada seccion para que inicie desde 1*/
+.setup,
+.conceptos {
+  counter-reset: namberLvl3;
+}
+/* incrementamos el contdor namberLvl3 */
+.setup > h3,
+.conceptos h3 {
+  counter-increment: namberLvl3;
+}
 .setup > h3::before,
 .conceptos > h3::before {
-  content: "-";
+  content: counter(namberLvl3) ".";
+  /* content: counter(namberLvl3, upper-roman) ".-"; contar en romanos*/
 }
 .setup > h3::after,
 .conceptos > h3::after {
