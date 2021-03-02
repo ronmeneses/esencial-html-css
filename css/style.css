@@ -26,7 +26,8 @@
 }
 
 :root {
-  font-family: charter;
+  /* font-family: charter; */
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   --gray40: #212121;
   --gray30: #212429;
