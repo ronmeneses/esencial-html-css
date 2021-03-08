@@ -59,6 +59,7 @@ nav a:hover {
 }
 nav details summary {
   font-weight: bold;
+  cursor: pointer;
 }
 h1 {
   color: var(--gray40);
