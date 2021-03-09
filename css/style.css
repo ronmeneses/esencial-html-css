@@ -89,6 +89,7 @@ h1 + p {
   margin: 16px 0 0;
 }
 p {
+  color: var(--gray20);
   line-height: 24px;
 }
 hr {
@@ -110,6 +111,10 @@ h2 {
 .seccion h2 {
   margin: 0;
 }
+.seccion h3 {
+  /* background: red; */
+  padding-bottom: 4px;
+}
 .seccion img {
   margin: 16px 0 0;
 }
@@ -117,6 +122,7 @@ h2 {
   margin: 16px 0 0;
 }
 h3 {
+  color: var(--gray20);
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 28.13px;
@@ -144,22 +150,31 @@ h3 {
 }
 blockquote {
   margin: 32px 0 0;
+  padding-left: 16px;
+}
+blockquote > p + p {
+  color: var(--gray10);
+}
+blockquote > p + p::before {
+  content: "-";
 }
 .seccion + hr {
   display: none;
 }
 pre {
   background-color: #fec62e;
+  font-family: "Roboto", sans-serif;
+  line-height: 24px;
+  padding: 40px;
 }
 .seccion ol li {
   line-height: 24px;
+  color: var(--gray20);
 }
 .seccion ul li {
+  color: var(--gray20);
   line-height: 24px;
   margin-top: 16px;
-}
-.modeloDeCaja > ol {
-  color: var(--gray20);
 }
 /* La numeracion con css para cada una de nuestras secciones */
 /* reseteamos el contador en cada seccion para que inicie desde 1*/
@@ -174,7 +189,7 @@ pre {
 }
 .setup > h3::before,
 .conceptos > h3::before {
-  content: counter(namberLvl3) ".";
+  content: counter(namberLvl3) ". ";
   /* content: counter(namberLvl3, upper-roman) ".-"; contar en romanos*/
 }
 .setup > h3::after,
