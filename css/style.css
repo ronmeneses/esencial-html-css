@@ -149,8 +149,13 @@ h3 {
   margin: 16px 0 0;
 }
 blockquote {
+  font-size: 1.5rem;
   margin: 32px 0 0;
   padding-left: 16px;
+  border-left: 4px solid var(--gray40);
+}
+blockquote p {
+  line-height: 32px;
 }
 blockquote > p + p {
   color: var(--gray10);
