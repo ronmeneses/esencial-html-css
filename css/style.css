@@ -53,6 +53,9 @@ header {
   color: var(--gray10);
   font-size: 14px;
 }
+nav p {
+  margin-top: 64px;
+}
 nav a {
   color: var(--gray10);
   text-decoration: none;
@@ -60,9 +63,18 @@ nav a {
 nav a:hover {
   color: var(--gray40);
 }
+nav ol li {
+  margin-top: 16px;
+  line-height: 24px;
+}
 nav details summary {
   font-weight: bold;
   cursor: pointer;
+  line-height: 24px;
+  margin-top: 24px;
+}
+p + details > summary {
+  margin-top: 16px;
 }
 h1 {
   color: var(--gray40);
