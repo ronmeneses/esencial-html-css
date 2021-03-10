@@ -34,6 +34,10 @@
   --gray20: #424242;
   --gray10: #616161;
 }
+html {
+  /* esto genera una transicion suebe al hacer click en el menu nav */
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
 }
@@ -49,9 +53,21 @@ body {
   /* background-size: cover; */
   height: 350px;
 }
+.header {
+  position: sticky;
+  top: 0;
+}
+.header-content {
+  position: relative;
+}
 header {
   color: var(--gray10);
   font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: -208px;
+  width: 208px;
+  z-index: 1;
 }
 nav p {
   margin-top: 64px;
@@ -85,17 +101,17 @@ y sober sobre que elemento se esta trabajando */
   border: 1px solid blue !important;
   box-sizing: border-box;
 } */
-.main {
-  /* border: 1px solid green; */
-  /* background-color: hotpink; */
-}
+/* .main { */
+/* border: 1px solid green; */
+/* background-color: hotpink; */
+/* } */
 .wrapper {
   width: 902px;
   margin: auto;
 }
 .main-content {
   background: white;
-  padding: 20px;
+  padding: 24px;
 }
 h1 {
   color: var(--gray40);
@@ -123,25 +139,7 @@ h2 {
   padre mas grande del DOM en este caso al html que tiene por defecto 16pxs*/
   font-weight: 400;
 }
-.seccion {
-  margin: 164px 0 0;
-}
-.seccion:first-of-type {
-  margin: 0%;
-}
-.seccion h2 {
-  margin: 0;
-}
-.seccion h3 {
-  /* background: red; */
-  padding-bottom: 4px;
-}
-.seccion img {
-  margin: 16px 0 0;
-}
-.seccion p + p {
-  margin: 16px 0 0;
-}
+
 h3 {
   color: var(--gray20);
   font-size: 1.5rem;
@@ -193,36 +191,53 @@ pre {
   line-height: 24px;
   padding: 40px;
 }
-.seccion ol li {
+.seccion:first-of-type {
+  margin: 0%;
+}
+.seccion h2 {
+  margin: 0;
+}
+.seccion img {
+  margin: 16px 0 0;
+}
+.seccion p + p {
+  margin: 16px 0 0;
+}
+.modeloDeCaja ol li {
   line-height: 24px;
   color: var(--gray20);
 }
-.seccion ul li {
+.modeloDeCaja ul li {
   color: var(--gray20);
   line-height: 24px;
   margin-top: 16px;
 }
 /* La numeracion con css para cada una de nuestras secciones */
 /* reseteamos el contador en cada seccion para que inicie desde 1*/
-.setup,
-.conceptos {
+
+.seccion {
+  margin: 164px 0 0;
   counter-reset: namberLvl3;
 }
 /* incrementamos el contdor namberLvl3 */
-.setup > h3,
-.conceptos h3 {
+
+.seccion h3 {
   counter-increment: namberLvl3;
+  padding-bottom: 8px;
+  position: relative;
 }
-.setup > h3::before,
-.conceptos > h3::before {
+.seccion h3::before {
   content: counter(namberLvl3) ". ";
   /* content: counter(namberLvl3, upper-roman) ".-"; contar en romanos*/
 }
-.setup > h3::after,
-.conceptos > h3::after {
+
+.seccion h3::after {
+  background: var(--gray20);
   content: "";
+  display: inline-block;
   width: 80px;
   height: 4px;
-  background: var(--gray20);
-  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }

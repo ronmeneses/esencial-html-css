@@ -14,31 +14,39 @@
   </head>
   <body>
     <div class="place"></div>
-    <header>
-      <nav>
-        <p>CONTENIDO</p>
-        <details open>
-          <summary>Setup</summary>
-          <ol>
-            <a href="#googleChorme"><li>Google Chrome</li></a>
-            <a href="#vsc"><li>Visual Studio Code</li></a>
-            <a href="#figma"><li>Figma</li></a>
-            <a href="#gitHub"><li>GitHub</li></a>
-          </ol>
-        </details>
-        <details>
-          <summary>Conceptos esenciales del Desarrollo Web</summary>
-          <ol>
-            <a href="#html"><li>Qué es HTML</li></a>
-            <a href="#etiquetas"><li>Etiquetas</li></a>
-            <a href="#dom"><li>DOM</li></a>
-            <a href="#semantica"><li>Semántica</li></a>
-            <a href="#atributos"><li>Atributos</li></a>
-            <a href="#css"><li>Qué es CSS</li></a>
-          </ol>
-        </details>
-      </nav>
-    </header>
+
+    <div class="header">
+      <div class="wrapper">
+        <div class="header-content">
+          <header>
+            <nav>
+              <p>CONTENIDO</p>
+              <details open>
+                <summary>Setup</summary>
+                <ol>
+                  <a href="#googleChorme"><li>Google Chrome</li></a>
+                  <a href="#vsc"><li>Visual Studio Code</li></a>
+                  <a href="#figma"><li>Figma</li></a>
+                  <a href="#gitHub"><li>GitHub</li></a>
+                </ol>
+              </details>
+              <details open>
+                <summary>Conceptos esenciales del Desarrollo Web</summary>
+                <ol>
+                  <a href="#html"><li>Qué es HTML</li></a>
+                  <a href="#etiquetas"><li>Etiquetas</li></a>
+                  <a href="#dom"><li>DOM</li></a>
+                  <a href="#semantica"><li>Semántica</li></a>
+                  <a href="#atributos"><li>Atributos</li></a>
+                  <a href="#css"><li>Qué es CSS</li></a>
+                </ol>
+              </details>
+            </nav>
+          </header>
+        </div>
+      </div>
+    </div>
+
     <main class="main">
       <div class="wrapper">
         <div class="main-content">
@@ -112,7 +120,7 @@
           <hr />
           <section class="seccion conceptos">
             <h2>Conceptos esenciales del Desarrollo Web</h2>
-            <h3>Qué es HTML</h3>
+            <h3 id="html">Qué es HTML</h3>
             <p>
               Hyper Text Markup Language o Lenguaje de marcas Hipertexto. Es el
               componente más básico de la web. Define el significado y la
@@ -134,7 +142,7 @@
     /html&gt;
     </pre
             >
-            <h3>Etiquetas</h3>
+            <h3 id="etiquetas">Etiquetas</h3>
             <p>
               Las etiquetas HTML van a ayudarnos a brindar una estructura y
               semántica al contenido de nuestro website y cada una tiene
@@ -149,7 +157,7 @@
               en este curso vamos a usar las más importantes y que serán parte
               de tu día a día como Software Developer.
             </p>
-            <h3>DOM</h3>
+            <h3 id="dom">DOM</h3>
             <p>
               El Document Object Model es una estructura de árbol que
               representará todos nuestros proyectos web como si un árbol
@@ -162,7 +170,7 @@
               alt="Estructura de arbol de cualquier proyeto Web"
               title="Estructura de arbol de un proyecto Web"
             />
-            <h3>Sémantica</h3>
+            <h3 id="semantica">Sémantica</h3>
             <p>
               La semántica le brinda sentido a cada elemento existen en un sitio
               web, algunos elementos será meramente decorativos y no deben
@@ -175,7 +183,7 @@
               para que personas con habilidades diferentes puedan entender cada
               contenido.
             </p>
-            <h3>Atributos</h3>
+            <h3 id="atributos">Atributos</h3>
             <p>
               Los atributos le dan características extra a las etiquetas para
               complementar información y son pre programadas por el navegador,
@@ -183,7 +191,7 @@
               forma como ‘class’ pero otros atributos funcionan en solo alguna
               etiquetas como src
             </p>
-            <h3>CSS</h3>
+            <h3 id="css">CSS</h3>
             <p>
               Hojas de Estilo en Cascada (del inglés Cascading Style Sheets) o
               CSS es el lenguaje de estilos utilizado para describir la
@@ -195,7 +203,7 @@
               title="Logo y estructura de una hona de estilos de CSS"
             />
           </section>
-          <section class="seccion modeloDeCaja">
+          <section class="modeloDeCaja">
             <h2>Modelo de caja</h2>
             <h3>El modelo de caja está compuesto por:</h3>
             <p>
