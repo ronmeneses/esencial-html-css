@@ -91,17 +91,10 @@ blockquote {
 }
 blockquote p {
   color: var(--gray10);
-<<<<<<< HEAD
 }
 blockquote > p + p::before {
   content: "-";
 }
-=======
-}
-blockquote > p + p::before {
-  content: "-";
-}
->>>>>>> 2e4793d34e383614c39a232fc886390045e9f494
 .seccion + hr {
   display: none;
 }
