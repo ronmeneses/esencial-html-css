@@ -35,6 +35,9 @@
   --gray10: #ffffff;
   line-height: 24px;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: var(--gray40);
   margin: 0;
@@ -50,6 +53,7 @@ body {
 header {
   color: var(--gray10);
   font-size: 14px;
+  margin-block-start: 64px;
 }
 nav p {
   color: var(--gray10);
@@ -57,6 +61,7 @@ nav p {
 p {
   color: var(--gray20);
   font-size: 17px;
+  margin-block: 16px;
 }
 nav a {
   color: var(--gray20);
@@ -68,10 +73,15 @@ nav a:hover {
 nav details summary {
   font-weight: bold;
   cursor: pointer;
+  margin-block-start: 24px;
+}
+nav ol li {
+  margin-block: 16px;
 }
 h1 {
   font-size: 4rem;
   line-height: 87.3px;
+  margin-block: 64px 16px;
 }
 h2 {
   font-size: 2.5rem;
@@ -84,29 +94,52 @@ h3 {
   font-weight: 600;
   line-height: 43.65px;
 }
+hr {
+  border: 1px solid rgba(97, 97, 97, 0.2);
+  margin-block: 40px;
+}
 blockquote {
   background: var(--gray30);
-  padding: 24px 17px 24px 24px;
-  /* padding-right: 17px; */
+  margin-block: 80px 63px;
+  border-radius: 8px;
 }
 blockquote p {
   color: var(--gray10);
+  font-size: 24px;
+  line-height: 32px;
 }
 blockquote > p + p::before {
   content: "-";
 }
-.seccion + hr {
+blockquote + hr {
   display: none;
+}
+.seccion img {
+  margin-block: 40px 16px;
+  display: block;
+}
+.seccion h3 {
+  margin-block: 40px 16px;
+}
+.setup > h3 {
+  margin-block: 16px;
+}
+.conceptos img:last-of-type {
+  margin-block: 16px 122px;
+}
+.modeloDeCaja ol,
+.modeloDeCaja ul {
+  color: var(--gray20);
+  font-size: 17px;
+}
+.modeloDeCaja ul li {
+  margin-block: 16px;
 }
 pre {
   background-color: var(--gray30);
   font-family: "Nunito", sans-serif;
   padding: 40px;
   padding-right: 85px;
-}
-ol,
-ul {
-  color: var(--gray20);
 }
 ul li::marker {
   color: var(--gray10);
