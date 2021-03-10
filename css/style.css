@@ -85,6 +85,18 @@ y sober sobre que elemento se esta trabajando */
   border: 1px solid blue !important;
   box-sizing: border-box;
 } */
+.main {
+  /* border: 1px solid green; */
+  /* background-color: hotpink; */
+}
+.wrapper {
+  width: 902px;
+  margin: auto;
+}
+.main-content {
+  background: white;
+  padding: 20px;
+}
 h1 {
   color: var(--gray40);
   font-size: 3.75em;
