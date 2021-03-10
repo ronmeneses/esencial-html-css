@@ -24,23 +24,26 @@
   font-weight: 700;
   /* font-weight: 700; es igual que poner bold */
 }
-
+* {
+  margin: 0;
+}
 :root {
   /* font-family: charter; */
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
+  color: var(--gray10);
   font-size: 16px;
-  --gray40: #212121;
-  --gray30: #212429;
-  --gray20: #424242;
-  --gray10: #616161;
+  --gray40: #251f24;
+  --gray30: #3a3539;
+  --gray20: #a5a3a5;
+  --gray10: #ffffff;
+  line-height: 24px;
+}
+body {
+  background: var(--gray40);
 }
 .place {
-  background-image: linear-gradient(
-      3.36deg,
-      #212325 -63.62%,
-      rgba(255, 255, 255, 0) 43.49%
-    ),
-    url("../images/patron-1.png");
+  background-image: linear-gradient(96.07deg, #314755 30.63%, #26a0da 102.18%);
+  /* url("../images/patron-1.png"); */
   /* background-repeat: no-repeat; */
   /* background-position: left 30px bottom 50px; */
   /* background-size: cover; */
@@ -50,65 +53,85 @@ header {
   color: var(--gray10);
   font-size: 14px;
 }
-nav a {
+nav p {
   color: var(--gray10);
+}
+p {
+  color: var(--gray20);
+  font-size: 17px;
+}
+nav a {
+  color: var(--gray20);
   text-decoration: none;
 }
 nav a:hover {
-  color: var(--gray40);
+  color: var(--gray10);
 }
 nav details summary {
   font-weight: bold;
   cursor: pointer;
 }
 h1 {
-  color: var(--gray40);
-  font-size: 3.75em;
-  /* 60px/16px=3.75em */
-}
-h1 + p {
-  color: var(--gray40);
-}
-.modeloDeCaja > ol {
-  color: var(--gray20);
+  font-size: 4rem;
+  line-height: 87.3px;
 }
 h2 {
-  color: var(--gray40);
-  font-size: 2rem;
+  font-size: 2.5rem;
+  line-height: 54.56px;
   /* 32px/16px=2rem a diferencia de em, rem toma el tamaño base al 
   padre mas grande del DOM en este caso al html que tiene por defecto 16pxs*/
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 43.65px;
 }
-h3,
-p {
+blockquote {
+  background: var(--gray30);
+  padding: 24px 17px 24px 24px;
+  /* padding-right: 17px; */
+}
+blockquote p {
+  color: var(--gray10);
+}
+blockquote > p + p::before {
+  content: "-";
+}
+.seccion + hr {
+  display: none;
+}
+pre {
+  background-color: var(--gray30);
+  font-family: "Nunito", sans-serif;
+  padding: 40px;
+  padding-right: 85px;
+}
+ol,
+ul {
   color: var(--gray20);
 }
-h3 + ul > li {
-  color: var(--gray20);
+ul li::marker {
+  color: var(--gray10);
 }
+
 /* La numeracion con css para cada una de nuestras secciones */
 /* reseteamos el contador en cada seccion para que inicie desde 1*/
-.setup,
-.conceptos {
+.seccion {
   counter-reset: namberLvl3;
 }
 /* incrementamos el contdor namberLvl3 */
-.setup > h3,
-.conceptos h3 {
+.seccion h3 {
   counter-increment: namberLvl3;
 }
-.setup > h3::before,
-.conceptos > h3::before {
-  content: counter(namberLvl3) ".";
+.seccion > h3::before {
+  content: counter(namberLvl3) ". ";
   /* content: counter(namberLvl3, upper-roman) ".-"; contar en romanos*/
 }
-.setup > h3::after,
+/* .setup > h3::after,
 .conceptos > h3::after {
   content: "";
   width: 80px;
   height: 4px;
   background: var(--gray20);
   display: inline-block;
-}
+} */
