@@ -124,6 +124,10 @@ blockquote + hr {
 .setup > h3 {
   margin-block: 16px;
 }
+.conceptos img,
+.modeloDeCaja img {
+  max-inline-size: 100%;
+}
 .conceptos img:last-of-type {
   margin-block: 16px 122px;
 }
@@ -166,3 +170,14 @@ ul li::marker {
   background: var(--gray20);
   display: inline-block;
 } */
+.main {
+  outline: 1px solid red;
+}
+.wrapper {
+  outline: 2px solid yellow;
+  max-inline-size: 636px;
+  margin: auto;
+}
+.main-content {
+  outline: 3px solid blue;
+}
