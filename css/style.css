@@ -50,10 +50,21 @@ body {
   /* background-size: cover; */
   height: 350px;
 }
+.header {
+  position: sticky;
+  inset-block-start: -5px;
+}
+.header-content {
+  position: relative;
+  margin-block-start: 64px;
+}
 header {
   color: var(--gray10);
   font-size: 14px;
-  margin-block-start: 64px;
+  inline-size: 208px;
+  position: absolute;
+  /* inset-block-start: 0px; */
+  inset-inline-start: -208px;
 }
 nav p {
   color: var(--gray10);
