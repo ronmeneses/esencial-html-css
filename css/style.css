@@ -232,3 +232,26 @@ ul li::marker {
   background: var(--gray20);
   border-radius: 50%;
 }
+.form input {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  background: var(--gray40);
+  /* display: block; */
+  box-sizing: border-box;
+  border: 1px solid var(--gray10);
+  border-radius: 8px;
+  color: var(--gray10);
+  inline-size: 100%;
+  line-height: 24px;
+  padding-block: 12px;
+  padding-inline: 16px;
+  margin-block-end: 24px;
+  outline: none;
+}
+.form input[type="submit"] {
+  background: #157efb;
+  border: none;
+}
+.form input::-webkit-input-placeholder {
+  color: var(--gray10);
+}
