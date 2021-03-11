@@ -143,7 +143,17 @@ blockquote + hr {
 }
 pre {
   background-color: var(--gray30);
-  border-radius: 8px;
+  /* border: 8px solid #5551ff; */
+  border-inline: 8px solid #5551ff;
+  border-block: 8px solid #5551ff;
+  /* border-inline-end-width: 15px; */
+  /* border-inline-end-color: violet; */
+  border-start-start-radius: 8px;
+  border-start-end-radius: 8px;
+  border-end-start-radius: 8px;
+  border-end-end-radius: 8px;
+  box-shadow: -10px 10px 0 0 #abaaf6;
+  /* border-radius: 8px; */
   font-family: "Nunito", sans-serif;
   padding-inline: 40px 85px;
   padding-block: 40px;
@@ -174,9 +184,7 @@ ul li::marker {
   background: var(--gray20);
   display: inline-block;
 } */
-.main {
-  /* outline: 1px solid red; */
-}
+
 .wrapper {
   /* outline: 2px solid yellow; */
   max-inline-size: 902px;
