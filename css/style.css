@@ -85,6 +85,7 @@ nav details summary {
   font-weight: bold;
   cursor: pointer;
   margin-block-start: 24px;
+  outline: none;
 }
 nav ol li {
   margin-block: 16px;
