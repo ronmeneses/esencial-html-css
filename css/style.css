@@ -206,3 +206,29 @@ ul li::marker {
   padding-inline: 16px;
   /* outline: 3px solid blue; */
 }
+.slider-container {
+  display: block;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  font-size: 0;
+}
+.video {
+  /* border: 1px solid orange; */
+  /* margin: 0; */
+  border-radius: 8px;
+  display: inline-block;
+  inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 16/9;
+}
+.slider-bullet-list {
+  text-align: center;
+}
+.slider-bullet {
+  display: inline-block;
+  block-size: 15px;
+  inline-size: 15px;
+  background: var(--gray20);
+  border-radius: 50%;
+}
