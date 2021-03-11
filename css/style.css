@@ -102,6 +102,8 @@ blockquote {
   background: var(--gray30);
   margin-block: 80px 63px;
   border-radius: 8px;
+  padding-inline: 24px 17px;
+  padding-block: 24px;
 }
 blockquote p {
   color: var(--gray10);
@@ -141,9 +143,11 @@ blockquote + hr {
 }
 pre {
   background-color: var(--gray30);
+  border-radius: 8px;
   font-family: "Nunito", sans-serif;
-  padding: 40px;
-  padding-right: 85px;
+  padding-inline: 40px 85px;
+  padding-block: 40px;
+  overflow: auto;
 }
 ul li::marker {
   color: var(--gray10);
@@ -171,13 +175,14 @@ ul li::marker {
   display: inline-block;
 } */
 .main {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 .wrapper {
-  outline: 2px solid yellow;
-  max-inline-size: 636px;
+  /* outline: 2px solid yellow; */
+  max-inline-size: 902px;
   margin: auto;
 }
 .main-content {
-  outline: 3px solid blue;
+  padding-inline: 16px;
+  /* outline: 3px solid blue; */
 }
