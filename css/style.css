@@ -48,23 +48,24 @@ body {
   /* background-repeat: no-repeat; */
   /* background-position: left 30px bottom 50px; */
   /* background-size: cover; */
-  height: 350px;
+  height: 50px;
 }
 .header {
-  position: sticky;
-  inset-block-start: -5px;
+  /* position: sticky; */
+  /* inset-block-start: -5px; */
 }
 .header-content {
-  position: relative;
-  margin-block-start: 64px;
+  padding-inline: 16px;
+  /* position: relative;
+  margin-block-start: 64px; */
 }
 header {
   color: var(--gray10);
   font-size: 14px;
-  inline-size: 208px;
-  position: absolute;
+  /* inline-size: 208px; */
+  /* position: absolute; */
   /* inset-block-start: 0px; */
-  inset-inline-start: -208px;
+  /* inset-inline-start: -208px; */
 }
 nav p {
   color: var(--gray10);
@@ -91,18 +92,18 @@ nav ol li {
   margin-block: 16px;
 }
 h1 {
-  font-size: 4rem;
+  font-size: 40px;
   line-height: 87.3px;
-  margin-block: 64px 16px;
+  margin-block: 20px 16px;
 }
 h2 {
-  font-size: 2.5rem;
+  font-size: 35px;
   line-height: 54.56px;
   /* 32px/16px=2rem a diferencia de em, rem toma el tamaño base al 
   padre mas grande del DOM en este caso al html que tiene por defecto 16pxs*/
 }
 h3 {
-  font-size: 2rem;
+  font-size: 25px;
   font-weight: 600;
   line-height: 43.65px;
 }
@@ -254,4 +255,59 @@ ul li::marker {
 }
 .form input::-webkit-input-placeholder {
   color: var(--gray10);
+}
+
+/* / RESPONSIVE
+   ========================================================================= / */
+
+/* / Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- / */
+@media screen and (min-width: 768px) {
+  .place {
+    block-size: 70px;
+  }
+}
+
+/* / Tablets en horizonal y escritorios normales
+   ------------------------------------------------------------------------- / */
+@media screen and (min-width: 1024px) {
+  .place {
+    block-size: 150px;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* / Escritorios muy anchos
+   ------------------------------------------------------------------------- */
+@media screen and (min-width: 1350px) {
+  .place {
+    block-size: 350px;
+  }
+  .header {
+    position: sticky;
+    inset-block-start: -5px;
+  }
+  .header-content {
+    padding-inline: 0px;
+    position: relative;
+    margin-block-start: 64px;
+  }
+  header {
+    inline-size: 208px;
+    position: absolute;
+    /* inset-block-start: 0px; */
+    inset-inline-start: -208px;
+  }
+  h1 {
+    font-size: 4rem;
+    margin-block: 64px 16px;
+  }
+  h3 {
+    font-size: 2rem;
+  }
 }
