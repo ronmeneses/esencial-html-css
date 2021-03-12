@@ -50,10 +50,10 @@ body {
   /* background-size: cover; */
   height: 50px;
 }
-.header {
-  /* position: sticky; */
-  /* inset-block-start: -5px; */
-}
+/* .header { */
+/* position: sticky; */
+/* inset-block-start: -5px; */
+/* } */
 .header-content {
   padding-inline: 16px;
   /* position: relative;
