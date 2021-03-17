@@ -33,6 +33,11 @@
   --gray30: #212429;
   --gray20: #424242;
   --gray10: #616161;
+  line-height: 24px;
+  color: var(--gray20);
+}
+body {
+  margin: 0;
 }
 .place {
   background-image: linear-gradient(
@@ -47,6 +52,7 @@
   height: 350px;
 }
 header {
+  margin-block-start: 64px;
   color: var(--gray10);
   font-size: 14px;
 }
@@ -57,58 +63,124 @@ nav a {
 nav a:hover {
   color: var(--gray40);
 }
+p {
+  margin-block: 16px;
+}
+p a {
+  color: var(--gray40);
+}
 nav details summary {
   font-weight: bold;
   cursor: pointer;
+  outline: none;
 }
+details:last-of-type {
+  margin-block-start: 24px;
+}
+nav ol li {
+  margin-block: 16px;
+}
+
 h1 {
   color: var(--gray40);
-  font-size: 3.75em;
-  /* 60px/16px=3.75em */
+  font-size: 60px;
+  line-height: 70.31px;
+  font-weight: 400;
+  margin-block: 60px 16px;
 }
 h1 + p {
   color: var(--gray40);
 }
-.modeloDeCaja > ol {
-  color: var(--gray20);
+hr {
+  border: 1px solid rgba(97, 97, 97, 0.2);
+  margin-block: 64px;
 }
 h2 {
   color: var(--gray40);
-  font-size: 2rem;
+  font-size: 32px;
   /* 32px/16px=2rem a diferencia de em, rem toma el tamaño base al 
   padre mas grande del DOM en este caso al html que tiene por defecto 16pxs*/
+  font-weight: normal;
+  line-height: 37.5px;
+  margin-block: 64px 40px;
 }
 h3 {
-  font-size: 1.5rem;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28.13px;
 }
-h3,
-p {
-  color: var(--gray20);
+.section img {
+  margin-block: 40px 16px;
+  display: block;
 }
-h3 + ul > li {
-  color: var(--gray20);
+.section h3 {
+  margin-block: 40px 24px;
+  counter-increment: namberLvl3; /* incrementamos el contdor namberLvl3 */
+  position: relative;
+  padding-block-end: 8px;
+}
+.setup h3 {
+  margin-block: 16px 24px;
 }
 /* La numeracion con css para cada una de nuestras secciones */
 /* reseteamos el contador en cada seccion para que inicie desde 1*/
-.setup,
-.conceptos {
+.section {
   counter-reset: namberLvl3;
 }
-/* incrementamos el contdor namberLvl3 */
-.setup > h3,
-.conceptos h3 {
-  counter-increment: namberLvl3;
-}
-.setup > h3::before,
-.conceptos > h3::before {
-  content: counter(namberLvl3) ".";
+.section > h3::before {
+  content: counter(namberLvl3) ". ";
   /* content: counter(namberLvl3, upper-roman) ".-"; contar en romanos*/
 }
-.setup > h3::after,
-.conceptos > h3::after {
+.section h3::after {
   content: "";
   width: 80px;
   height: 4px;
   background: var(--gray20);
   display: inline-block;
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-end: 0;
 }
+blockquote + hr {
+  display: none;
+}
+blockquote {
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--gray20);
+  margin-block: 32px 64px;
+  margin-inline: 0;
+  border-inline-start: 4px solid var(--gray40);
+  padding-inline-start: 16px;
+}
+blockquote p:last-of-type {
+  color: var(--gray10);
+}
+blockquote p + p::before {
+  content: "-";
+}
+pre {
+  background: #fec62e;
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  padding-block: 40px;
+  padding-inline: 40px 351px;
+}
+.conceptos img {
+  margin-block: 16px 40px;
+}
+.conceptos img:last-of-type {
+  margin-block: 16px 164px;
+}
+.no-Num h3 {
+  margin-block: 40px 16px;
+}
+.no-Num ol {
+  margin-block: 16px 40px;
+}
+.no-Num ul li {
+  margin-block: 16px;
+}
+
+/* falta ver que cambio hace este codigo */
