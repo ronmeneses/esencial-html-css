@@ -207,3 +207,36 @@ pre {
   background: var(--gray20);
   border-radius: 50%;
 }
+.form {
+  margin-block: 40px 113px;
+  margin-inline-start: 3px;
+  position: relative;
+}
+
+form input {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  outline: none;
+  box-sizing: border-box;
+  border: 1px solid var(--gray10);
+  border-radius: 90px;
+  padding-block: 12px;
+  padding-inline: 16px;
+  color: var(--gray20);
+  margin-inline-end: 16px;
+  block-size: 48px;
+  inline-size: 280px;
+}
+form input::-webkit-input-placeholder {
+  color: var(--gray20);
+}
+form input[type="submit"] {
+  border: none;
+  color: white;
+  background: #000000;
+  position: absolute;
+  inline-size: 119px;
+  inset-inline-start: 516px;
+  inset-block-end: 0;
+}
