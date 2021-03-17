@@ -49,7 +49,7 @@ body {
   /* background-repeat: no-repeat; */
   /* background-position: left 30px bottom 50px; */
   /* background-size: cover; */
-  height: 350px;
+  block-size: 350px;
 }
 header {
   margin-block-start: 64px;
@@ -239,4 +239,22 @@ form input[type="submit"] {
   inline-size: 119px;
   inset-inline-start: 516px;
   inset-block-end: 0;
+}
+footer {
+  background: var(--gray30);
+  box-sizing: border-box;
+  text-align: center;
+  block-size: 174px;
+  padding-block: 48px;
+}
+footer h2 {
+  color: white;
+  margin-block: 0;
+  margin-block-end: 19px;
+}
+footer a {
+  text-decoration: none;
+}
+footer img {
+  margin-inline: 11px;
 }
