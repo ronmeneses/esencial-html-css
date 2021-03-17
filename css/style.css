@@ -48,16 +48,7 @@ body {
   /* background-repeat: no-repeat; */
   /* background-position: left 30px bottom 50px; */
   /* background-size: cover; */
-  height: 50px;
-}
-/* .header { */
-/* position: sticky; */
-/* inset-block-start: -5px; */
-/* } */
-.header-content {
-  padding-inline: 16px;
-  /* position: relative;
-  margin-block-start: 64px; */
+  block-size: 350px;
 }
 header {
   color: var(--gray10);
@@ -255,6 +246,24 @@ ul li::marker {
 }
 .form input::-webkit-input-placeholder {
   color: var(--gray10);
+}
+footer {
+  background: var(--gray30);
+  box-sizing: border-box;
+  text-align: center;
+  block-size: 174px;
+  padding-block: 48px;
+}
+footer h2 {
+  color: white;
+  margin-block: 0;
+  margin-block-end: 19px;
+}
+footer a {
+  text-decoration: none;
+}
+footer img {
+  margin-inline: 11px;
 }
 
 /* / RESPONSIVE
