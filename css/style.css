@@ -41,25 +41,15 @@ html {
 body {
   margin: 0;
 }
-.place {
-  background-image: linear-gradient(
-      3.36deg,
-      #212325 -63.62%,
-      rgba(255, 255, 255, 0) 43.49%
-    ),
-    url("../images/patron-1.png");
-  /* background-repeat: no-repeat; */
-  /* background-position: left 30px bottom 50px; */
-  /* background-size: cover; */
-  /* block-size: 350px; */
-  block-size: 100px;
-}
-header {
+.header {
   inline-size: 208px;
   margin-block-start: 30px;
-  padding-inline-start: 16px;
   color: var(--gray10);
   font-size: 14px;
+}
+nav {
+  border-inline-start: 4px solid #c4c4c4;
+  padding-inline-start: 16px;
 }
 nav a {
   color: var(--gray10);
@@ -68,6 +58,23 @@ nav a {
 nav a:hover {
   color: var(--gray40);
 }
+nav ol {
+  padding-inline-start: 15px;
+}
+nav ol li {
+  margin-block: 16px;
+}
+nav details summary {
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+nav details summary:first-of-type {
+  list-style-type: none;
+}
+details:last-of-type {
+  margin-block-start: 24px;
+}
 p {
   margin-block: 16px;
   text-align: justify;
@@ -75,18 +82,6 @@ p {
 p a {
   color: var(--gray40);
 }
-nav details summary {
-  font-weight: bold;
-  cursor: pointer;
-  outline: none;
-}
-details:last-of-type {
-  margin-block-start: 24px;
-}
-nav ol li {
-  margin-block: 16px;
-}
-
 h1 {
   color: var(--gray40);
   font-size: 50px;
@@ -278,9 +273,6 @@ footer img {
 
 /*Móviles en horizontal o tablets en vertical*/
 @media screen and (min-width: 776px) {
-  .place {
-    block-size: 150px;
-  }
   form {
     margin-inline: 65px;
   }
@@ -297,26 +289,6 @@ footer img {
 }
 /*Tablets en horizonal y escritorios normales*/
 @media screen and (min-width: 1024px) {
-  .place {
-    block-size: 250px;
-  }
-  header {
-    margin-block-start: 45px;
-    padding-inline-start: 0;
-    position: absolute;
-    inset-inline-start: -190px;
-  }
-  .header {
-    position: sticky;
-    inset-block-start: -35px;
-  }
-  .header-content {
-    position: relative;
-  }
-  .wrapper {
-    margin-inline-start: 200px;
-  }
-
   h1 {
     font-size: 55px;
     margin-block: 45px 16px;
@@ -337,27 +309,8 @@ footer img {
 
 /*Escritorios muy anchos*/
 @media screen and (min-width: 1350px) {
-  .place {
-    block-size: 350px;
-  }
-  header {
-    margin-block-start: 64px;
-    padding-inline-start: 0;
-    position: absolute;
-    inset-inline-start: -208px;
-  }
-  .header {
-    position: sticky;
-    inset-block-start: -35px;
-  }
-  .header-content {
-    position: relative;
-  }
-  .wrapper {
-    margin: auto;
-  }
   h1 {
     font-size: 60px;
-    margin-block: 64px 16px;
+    margin-block: 120px 16px;
   }
 }
