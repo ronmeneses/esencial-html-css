@@ -26,7 +26,6 @@
 }
 
 :root {
-  /* font-family: charter; */
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   --gray40: #212121;
@@ -52,9 +51,12 @@ body {
   block-size: 350px;
 }
 header {
+  inline-size: 208px;
   margin-block-start: 64px;
   color: var(--gray10);
   font-size: 14px;
+  position: absolute;
+  inset-inline-start: -208px;
 }
 nav a {
   color: var(--gray10);
@@ -86,7 +88,7 @@ h1 {
   font-size: 60px;
   line-height: 70.31px;
   font-weight: 400;
-  margin-block: 60px 16px;
+  margin-block: 64px 16px;
 }
 h1 + p {
   color: var(--gray40);
@@ -169,6 +171,7 @@ pre {
 }
 .conceptos img {
   margin-block: 16px 40px;
+  inline-size: 100%;
 }
 .conceptos img:last-of-type {
   margin-block: 16px 164px;
@@ -239,6 +242,7 @@ form input[type="submit"] {
   inline-size: 119px;
   inset-inline-start: 516px;
   inset-block-end: 0;
+  cursor: pointer;
 }
 footer {
   background: var(--gray30);
@@ -257,4 +261,18 @@ footer a {
 }
 footer img {
   margin-inline: 11px;
+}
+.wrapper {
+  max-inline-size: 902px;
+  margin: auto;
+}
+.header-content {
+  position: relative;
+}
+.main-content {
+  padding-inline: 16px;
+}
+.header {
+  position: sticky;
+  inset-block-start: -35px;
 }
