@@ -28,9 +28,10 @@
 :root {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  --gray40: #212121;
+  --gray50: #5551ff;
+  --gray40: #000000;
   --gray30: #212429;
-  --gray20: #424242;
+  --gray20: #545454;
   --gray10: #616161;
   line-height: 24px;
   color: var(--gray20);
@@ -43,9 +44,9 @@ body {
 }
 .place {
   background-image: linear-gradient(
-      3.36deg,
-      #212325 -63.62%,
-      rgba(255, 255, 255, 0) 43.49%
+      274.51deg,
+      rgba(74, 0, 224, 0.6) 5%,
+      rgba(142, 45, 226, 0.5) 130.61%
     ),
     url("../images/patron-1.png");
   /* background-repeat: no-repeat; */
@@ -58,11 +59,12 @@ header {
   inline-size: 208px;
   margin-block-start: 30px;
   padding-inline-start: 16px;
-  color: var(--gray10);
+  color: var(--gray40);
+  /* color: rgba(0, 0, 0, 0.5); */
   font-size: 14px;
 }
 nav a {
-  color: var(--gray10);
+  color: var(--gray40);
   text-decoration: none;
 }
 nav a:hover {
@@ -73,21 +75,58 @@ p {
   text-align: justify;
 }
 p a {
-  color: var(--gray40);
+  color: var(--gray20);
 }
-nav details summary {
+section + p {
+  text-align: center;
+}
+details summary {
   font-weight: bold;
   cursor: pointer;
   outline: none;
 }
+details summary:first-of-type {
+  list-style-type: none;
+}
+summary:before {
+  content: url(../images/cerrado.png); /* nuevo icono*/
+  color: var(--gray40);
+  margin-inline-end: 15px;
+}
+details[open] summary::before {
+  content: url(../images/abierto.png); /* nuevo icono */
+}
+
 details:last-of-type {
   margin-block-start: 24px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-block-start: 20px;
+}
+nav ol {
+  padding-inline-start: 0;
 }
 nav ol li {
+  block-size: 40px;
+  inline-size: 188px;
   margin-block: 16px;
+  list-style: none;
+  counter-increment: namberLvl2;
+}
+nav ol li:first-of-type a {
+  background: var(--gray50);
+  color: white;
+}
+nav ol li a {
+  display: block;
+  padding-block: 8px;
+  padding-inline: 8px;
+}
+nav ol li a::before {
+  content: counter(namberLvl2) ". ";
 }
 
 h1 {
+  text-align: center;
   color: var(--gray40);
   font-size: 50px;
   line-height: 70.31px;
@@ -95,7 +134,8 @@ h1 {
   margin-block: 30px 16px;
 }
 h1 + p {
-  color: var(--gray40);
+  text-align: center;
+  color: var(--gray20);
 }
 hr {
   border: 1px solid rgba(97, 97, 97, 0.2);
@@ -111,12 +151,17 @@ h2 {
   margin-block: 40px 40px;
 }
 h3 {
+  color: var(--gray40);
   font-weight: normal;
   font-size: 24px;
   line-height: 28.13px;
 }
+span {
+  color: var(--gray50);
+}
 .section img {
   margin-block: 40px 16px;
+  margin-inline: auto;
   display: block;
 }
 .section h3 {
@@ -132,20 +177,11 @@ h3 {
 /* reseteamos el contador en cada seccion para que inicie desde 1*/
 .section {
   counter-reset: namberLvl3;
+  text-align: center;
 }
 .section > h3::before {
   content: counter(namberLvl3) ". ";
   /* content: counter(namberLvl3, upper-roman) ".-"; contar en romanos*/
-}
-.section h3::after {
-  content: "";
-  width: 80px;
-  height: 4px;
-  background: var(--gray20);
-  display: inline-block;
-  position: absolute;
-  inset-inline-start: 0;
-  inset-block-end: 0;
 }
 blockquote + hr {
   display: none;
@@ -153,25 +189,25 @@ blockquote + hr {
 blockquote {
   font-size: 24px;
   line-height: 32px;
-  color: var(--gray20);
+  color: var(--gray40);
   margin-block: 32px 64px;
-  margin-inline: 0;
-  border-inline-start: 4px solid var(--gray40);
+  border-inline-start: 4px solid var(--gray50);
   padding-inline-start: 16px;
-}
-blockquote h3:last-of-type {
-  color: var(--gray10);
 }
 blockquote h3 + h3::before {
   content: "-";
 }
 pre {
-  background: #fec62e;
+  background: white;
+  border: 8px solid var(--gray50);
+  border-radius: 8px;
+  box-shadow: -10px 10px 0 0 #abaaf6;
   color: #000000;
   font-family: "Roboto", sans-serif;
   font-weight: normal;
   padding-block: 40px;
   padding-inline: 40px;
+  text-align: start;
   overflow: auto;
 }
 .conceptos img {
@@ -189,6 +225,9 @@ pre {
 }
 .no-Num ul li {
   margin-block: 16px;
+}
+.no-Num ul li::marker {
+  color: var(--gray50);
 }
 
 .slider-container {
@@ -212,8 +251,11 @@ pre {
   display: inline-block;
   block-size: 15px;
   inline-size: 15px;
-  background: var(--gray20);
+  background: rgba(142, 45, 226, 0.5);
   border-radius: 50%;
+}
+.slider-bullet:first-of-type {
+  background: var(--gray50);
 }
 .form {
   margin-block: 40px 40px;
@@ -227,7 +269,7 @@ form input {
   line-height: 24px;
   outline: none;
   box-sizing: border-box;
-  border: 1px solid var(--gray10);
+  border: 1px solid var(--gray40);
   border-radius: 90px;
   padding-block: 12px;
   padding-inline: 16px;
@@ -242,16 +284,11 @@ form input::-webkit-input-placeholder {
 form input[type="submit"] {
   border: none;
   color: white;
-  background: #000000;
-  /* position: absolute; */
-  /* inline-size: 119px; */
-  /* inset-inline-start: 516px; */
-  /* inset-inline-start: 0px; */
-  /* inset-block-end: 0; */
+  background: var(--gray50);
   cursor: pointer;
 }
 footer {
-  background: var(--gray30);
+  background: var(--gray40);
   box-sizing: border-box;
   text-align: center;
   block-size: 174px;
@@ -273,7 +310,7 @@ footer img {
   margin: auto;
 }
 .main-content {
-  padding-inline: 16px;
+  padding-inline: 16px 24px;
 }
 
 /*Móviles en horizontal o tablets en vertical*/
@@ -294,6 +331,13 @@ footer img {
     inline-size: 119px;
     inset-inline-start: 550px;
   }
+  section + p {
+    text-align: start;
+  }
+  blockquote {
+    inline-size: 613px;
+    margin-inline: auto;
+  }
 }
 /*Tablets en horizonal y escritorios normales*/
 @media screen and (min-width: 1024px) {
@@ -304,7 +348,7 @@ footer img {
     margin-block-start: 45px;
     padding-inline-start: 0;
     position: absolute;
-    inset-inline-start: -190px;
+    inset-inline-end: -208px;
   }
   .header {
     position: sticky;
@@ -314,7 +358,7 @@ footer img {
     position: relative;
   }
   .wrapper {
-    margin-inline-start: 200px;
+    margin-inline-end: 200px;
   }
 
   h1 {
@@ -333,6 +377,15 @@ footer img {
   .form {
     margin-block: 40px 113px;
   }
+  .section {
+    text-align: center;
+  }
+  .section p {
+    text-align: center;
+  }
+  .section img {
+    margin-inline: auto;
+  }
 }
 
 /*Escritorios muy anchos*/
@@ -341,10 +394,10 @@ footer img {
     block-size: 350px;
   }
   header {
-    margin-block-start: 64px;
+    margin-block-start: 65px;
     padding-inline-start: 0;
     position: absolute;
-    inset-inline-start: -208px;
+    inset-inline-end: -208px;
   }
   .header {
     position: sticky;
