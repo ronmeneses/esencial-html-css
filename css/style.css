@@ -26,7 +26,7 @@
 }
 
 :root {
-  font-family: "Roboto", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 16px;
   --gray50: #5551ff;
   --gray40: #000000;
@@ -73,6 +73,9 @@ nav a:hover {
 p {
   margin-block: 16px;
   text-align: justify;
+}
+section + p {
+  margin-block: 24px;
 }
 p a {
   color: var(--gray20);
@@ -165,13 +168,13 @@ span {
   display: block;
 }
 .section h3 {
-  margin-block: 40px 24px;
+  margin-block: 40px 16px;
   counter-increment: namberLvl3; /* incrementamos el contdor namberLvl3 */
   position: relative;
   padding-block-end: 8px;
 }
 .setup h3 {
-  margin-block: 16px 24px;
+  margin-block: 16px;
 }
 /* La numeracion con css para cada una de nuestras secciones */
 /* reseteamos el contador en cada seccion para que inicie desde 1*/
@@ -187,12 +190,15 @@ blockquote + hr {
   display: none;
 }
 blockquote {
+  border-inline-start: 4px solid var(--gray50);
+  margin-block: 64px;
+  padding-inline-start: 16px;
+}
+blockquote h3 {
+  margin-block: 16px;
   font-size: 24px;
   line-height: 32px;
   color: var(--gray40);
-  margin-block: 32px 64px;
-  border-inline-start: 4px solid var(--gray50);
-  padding-inline-start: 16px;
 }
 blockquote h3 + h3::before {
   content: "-";
@@ -203,7 +209,7 @@ pre {
   border-radius: 8px;
   box-shadow: -10px 10px 0 0 #abaaf6;
   color: #000000;
-  font-family: "Roboto", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: normal;
   padding-block: 40px;
   padding-inline: 40px;
@@ -220,8 +226,10 @@ pre {
 .no-Num h3 {
   margin-block: 40px 16px;
 }
-.no-Num ol {
+.no-Num ol,
+.no-Num ul {
   margin-block: 16px 40px;
+  padding-inline-start: 17px;
 }
 .no-Num ul li {
   margin-block: 16px;
@@ -372,7 +380,7 @@ footer img {
     margin-block: 64px 40px;
   }
   .conceptos img:last-of-type {
-    margin-block: 16px 164px;
+    margin-block: 16px 154.56px;
   }
   .form {
     margin-block: 40px 113px;
