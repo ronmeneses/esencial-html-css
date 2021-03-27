@@ -14,14 +14,29 @@ body {
   margin: 0;
   background: var(--blue30);
 }
+.header {
+  margin-block-start: 30px;
+}
+.wrapper {
+  max-inline-size: 636px;
+  margin: auto;
+}
+.main-content {
+  padding-inline: 16px;
+}
 header {
   color: var(--white10);
-  inline-size: 208px;
-  margin-block-start: 30px;
   padding-inline-start: 16px;
   font-size: 14px;
 }
-nav a {
+header p {
+  margin-block: 0 16px;
+}
+nav ol li {
+  margin-block: 16px;
+}
+nav ol li,
+a {
   color: var(--white20);
   text-decoration: none;
 }
@@ -36,15 +51,18 @@ p a {
   color: var(--gray40);
 }
 nav details summary {
+  margin-block: 24px 16px;
   font-weight: bold;
   cursor: pointer;
   outline: none;
+  list-style-type: none;
 }
-details:last-of-type {
-  margin-block-start: 24px;
+nav details summary::before {
+  content: url(../images/close.png);
+  margin-inline-end: 15.2px;
 }
-nav ol li {
-  margin-block: 16px;
+nav details[open] summary::before {
+  content: url(../images/open.png);
 }
 h1,
 h2,
@@ -55,7 +73,7 @@ h3 {
 h1 {
   font-size: 50px;
   line-height: 78.02px;
-  margin-block: 30px 16px;
+  margin-block: 0 16px;
 }
 hr {
   border: 1px solid rgba(97, 97, 97, 0.2);
@@ -225,25 +243,12 @@ footer h3 {
   margin-block-start: 0;
   margin-block-end: 19px;
 }
-footer a {
-  text-decoration: none;
-}
 footer img {
   margin-inline: 11px;
-}
-.wrapper {
-  max-inline-size: 902px;
-  margin: auto;
-}
-.main-content {
-  padding-inline: 16px;
 }
 
 /*Móviles en horizontal o tablets en vertical*/
 @media screen and (min-width: 776px) {
-  .place {
-    block-size: 150px;
-  }
   form {
     margin-inline: 65px;
   }
@@ -260,29 +265,28 @@ footer img {
 }
 /*Tablets en horizonal y escritorios normales*/
 @media screen and (min-width: 1024px) {
-  .place {
-    block-size: 250px;
-  }
-  header {
-    margin-block-start: 45px;
-    padding-inline-start: 0;
-    position: absolute;
-    inset-inline-start: -190px;
-  }
   .header {
     position: sticky;
-    inset-block-start: -35px;
+    inset-block-start: 30px;
+    margin-block-start: 60px;
   }
   .header-content {
     position: relative;
   }
   .wrapper {
-    margin-inline-start: 200px;
+    margin-inline-end: 4.64%;
   }
-
+  header {
+    inline-size: 306px;
+    padding-inline-start: 0;
+    position: absolute;
+    inset-inline-start: -330px;
+  }
+  nav {
+    padding-inline-end: 84px;
+  }
   h1 {
     font-size: 55px;
-    margin-block: 45px 16px;
   }
   hr {
     margin-block: 64px;
@@ -299,28 +303,11 @@ footer img {
 }
 
 /*Escritorios muy anchos*/
-@media screen and (min-width: 1350px) {
-  .place {
-    block-size: 350px;
-  }
-  header {
-    margin-block-start: 64px;
-    padding-inline-start: 0;
-    position: absolute;
-    inset-inline-start: -208px;
-  }
-  .header {
-    position: sticky;
-    inset-block-start: -35px;
-  }
-  .header-content {
-    position: relative;
-  }
+@media screen and (min-width: 1150px) {
   .wrapper {
-    margin: auto;
+    margin-inline-end: 14.64%;
   }
   h1 {
     font-size: 64px;
-    margin-block: 64px 16px;
   }
 }
