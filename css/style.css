@@ -115,6 +115,10 @@ h3 {
   font-size: 24px;
   line-height: 28.13px;
 }
+span {
+  font-weight: 700;
+  font-style: italic;
+}
 .section img {
   margin-block: 40px 16px;
   display: block;
@@ -212,8 +216,14 @@ pre {
   display: inline-block;
   block-size: 15px;
   inline-size: 15px;
-  background: var(--gray20);
+  background: rgba(66, 66, 66, 0.2);
   border-radius: 50%;
+}
+.slider-bullet:first-of-type {
+  background-color: var(--gray20);
+}
+section + p {
+  text-align: center;
 }
 .form {
   margin-block: 40px 40px;
@@ -281,9 +291,6 @@ footer img {
   .place {
     block-size: 150px;
   }
-  form {
-    margin-inline: 65px;
-  }
   form input {
     margin-inline-end: 16px;
     inline-size: 280px;
@@ -292,7 +299,7 @@ footer img {
   form input[type="submit"] {
     position: absolute;
     inline-size: 119px;
-    inset-inline-start: 550px;
+    inset-inline-start: 520px;
   }
 }
 /*Tablets en horizonal y escritorios normales*/
@@ -329,6 +336,9 @@ footer img {
   }
   .conceptos img:last-of-type {
     margin-block: 16px 164px;
+  }
+  section + p {
+    text-align: start;
   }
   .form {
     margin-block: 40px 113px;
