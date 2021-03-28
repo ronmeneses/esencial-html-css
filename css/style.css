@@ -47,9 +47,6 @@ p {
   margin-block: 16px;
   text-align: justify;
 }
-p a {
-  color: var(--gray40);
-}
 nav details summary {
   margin-block: 24px 16px;
   font-weight: bold;
@@ -82,7 +79,7 @@ hr {
 h2 {
   font-size: 40px;
   line-height: 48.76px;
-  margin-block: 40px 40px;
+  margin-block: 40px;
 }
 h3 {
   font-weight: 600;
@@ -100,10 +97,9 @@ span {
 .section h3 {
   margin-block: 40px 24px;
   counter-increment: namberLvl3; /* incrementamos el contdor namberLvl3 */
-  padding-block-end: 8px;
 }
 .setup h3 {
-  margin-block: 16px 24px;
+  margin-block: 16px;
 }
 .section {
   counter-reset: namberLvl3;
@@ -112,25 +108,23 @@ span {
   content: counter(namberLvl3) ". ";
   /* content: counter(namberLvl3, upper-roman) ".-"; contar en romanos*/
 }
-.section h3::after {
-  content: "";
-  width: 80px;
-  height: 4px;
-  background: var(--gray20);
-  display: inline-block;
-  position: absolute;
-  inset-inline-start: 0;
-  inset-block-end: 0;
-}
 section + p {
   font-family: "Nunito", sans-serif;
+  text-align: center;
+  margin-block: 40px;
+}
+section + p a {
+  color: #eebbc3;
 }
 blockquote + hr {
   display: none;
 }
 blockquote {
   background: #d4939d;
-  margin-block: 32px 64px;
+  border-radius: 8px;
+  margin-block: 58px 31px;
+  margin-inline: 0;
+  padding: 24px;
 }
 blockquote h3 {
   font-size: 24px;
@@ -144,11 +138,13 @@ blockquote h3 + h3::before {
 pre {
   color: var(--white10);
   font-family: "Montserrat", sans-serif;
+  margin-block: 16px 40px;
   padding-block: 40px;
   padding-inline: 40px;
   overflow: auto;
 }
 .conceptos img {
+  display: block;
   margin-block: 16px 40px;
   inline-size: 100%;
 }
@@ -163,6 +159,9 @@ pre {
 }
 .no-Num ul li {
   margin-block: 16px;
+}
+.no-Num ul li::marker {
+  color: var(--white10);
 }
 
 .slider-container {
@@ -186,8 +185,11 @@ pre {
   display: inline-block;
   block-size: 15px;
   inline-size: 15px;
-  background: var(--gray20);
+  background: #424242;
   border-radius: 50%;
+}
+.slider-bullet:first-of-type {
+  background-color: var(--white10);
 }
 .form {
   margin-block: 40px 40px;
@@ -256,7 +258,7 @@ footer img {
   .header {
     position: sticky;
     inset-block-start: 30px;
-    margin-block-start: 60px;
+    margin-block-start: 100px;
   }
   .header-content {
     position: relative;
@@ -277,16 +279,19 @@ footer img {
     font-size: 55px;
   }
   hr {
-    margin-block: 64px;
+    margin-block: 58px 40px;
   }
   h2 {
-    margin-block: 64px 40px;
+    margin-block: 31px 40px;
   }
   .conceptos img:last-of-type {
-    margin-block: 16px 164px;
+    margin-block: 16px 80px;
   }
   .form {
     margin-block: 40px 80px;
+  }
+  section + p {
+    text-align: start;
   }
 }
 
