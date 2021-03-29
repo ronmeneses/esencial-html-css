@@ -98,6 +98,9 @@ h3 {
   font-weight: 600;
   line-height: 43.65px;
 }
+span {
+  font-weight: 700;
+}
 hr {
   border: 1px solid rgba(97, 97, 97, 0.2);
   margin-block: 40px;
@@ -188,7 +191,11 @@ ul li::marker {
   background: var(--gray20);
   display: inline-block;
 } */
-
+#emergencia {
+  font-size: 24px;
+  line-height: 32.74px;
+  margin-block: 40px 16px;
+}
 .wrapper {
   /* outline: 2px solid yellow; */
   max-inline-size: 902px;
@@ -221,8 +228,21 @@ ul li::marker {
   display: inline-block;
   block-size: 15px;
   inline-size: 15px;
-  background: var(--gray20);
+  background: rgba(66, 66, 66, 0.2);
   border-radius: 50%;
+}
+.slider-bullet:first-of-type {
+  background: var(--gray10);
+}
+section + p {
+  margin-block: 51px 40px;
+  text-align: center;
+}
+
+.form h2 {
+  font-size: 24px;
+  line-height: 32.74px;
+  margin-block: 16px;
 }
 .form input {
   font-family: "Nunito", sans-serif;
@@ -243,6 +263,7 @@ ul li::marker {
 .form input[type="submit"] {
   background: #157efb;
   border: none;
+  margin-block: 0;
 }
 .form input::-webkit-input-placeholder {
   color: var(--gray10);
@@ -289,6 +310,9 @@ footer img {
   }
   h2 {
     font-size: 2.5rem;
+  }
+  section + p {
+    text-align: start;
   }
 }
 
