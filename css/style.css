@@ -71,7 +71,9 @@ header {
   margin-block: 0;
 }
 .variantes a {
+  box-sizing: border-box;
   display: block;
+  inline-size: 188px;
   margin-block: 8px;
   padding: 8px;
   color: var(--gray10);
@@ -381,10 +383,10 @@ footer img {
     position: absolute;
     inset-inline-end: -208px;
   }
-  .header {
-    /* position: sticky;
-    inset-block-start: -35px; */
-  }
+  /* .header {
+    position: sticky;
+    inset-block-start: -35px;
+  } */
   .header-content {
     position: relative;
   }
