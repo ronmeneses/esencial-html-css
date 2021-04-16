@@ -62,6 +62,36 @@ header {
 nav p {
   color: var(--gray10);
 }
+.variantes {
+  color: var(--gray10);
+  margin-block-end: 104px;
+}
+.variantes p {
+  margin-block: 0;
+}
+.variantes a {
+  display: block;
+  margin-block: 8px;
+  padding: 8px;
+  color: var(--gray10);
+  text-decoration: none;
+}
+.variantes a:first-of-type {
+  margin-block-start: 16px;
+}
+.variantes a:nth-of-type(4) {
+  background-color: var(--gray40);
+  border-radius: 4px;
+  color: white;
+}
+
+nav a {
+  color: var(--gray40);
+  text-decoration: none;
+}
+nav a:hover {
+  color: var(--gray40);
+}
 p {
   color: var(--gray20);
   font-size: 17px;
