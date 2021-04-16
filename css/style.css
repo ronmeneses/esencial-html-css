@@ -61,6 +61,29 @@ header {
   color: var(--gray10);
   font-size: 14px;
 }
+.variantes {
+  color: var(--gray10);
+  margin-block-end: 104px;
+}
+.variantes p {
+  margin-block: 0;
+}
+.variantes a {
+  display: block;
+  margin-block: 8px;
+  padding: 8px;
+  color: var(--gray10);
+  text-decoration: none;
+}
+.variantes a:first-of-type {
+  margin-block-start: 16px;
+}
+.variantes a:nth-of-type(4) {
+  background-color: var(--gray40);
+  border-radius: 4px;
+  color: white;
+}
+
 nav a {
   color: var(--gray10);
   text-decoration: none;
@@ -314,8 +337,8 @@ footer img {
     inset-inline-start: -190px;
   }
   .header {
-    position: sticky;
-    inset-block-start: -35px;
+    /* position: sticky;
+    inset-block-start: -35px; */
   }
   .header-content {
     position: relative;
@@ -355,10 +378,6 @@ footer img {
     padding-inline-start: 0;
     position: absolute;
     inset-inline-start: -208px;
-  }
-  .header {
-    position: sticky;
-    inset-block-start: -35px;
   }
   .header-content {
     position: relative;
