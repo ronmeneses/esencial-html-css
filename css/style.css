@@ -64,6 +64,7 @@ header {
   font-size: 14px;
 }
 .variantes {
+  font-family: "Roboto", sans-serif;
   color: var(--gray10);
   margin-block-end: 104px;
 }
@@ -72,6 +73,7 @@ header {
 }
 .variantes a {
   box-sizing: border-box;
+  font-weight: 500;
   display: block;
   inline-size: 188px;
   margin-block: 8px;
@@ -157,8 +159,7 @@ h1 {
   text-align: center;
   color: var(--gray40);
   font-size: 50px;
-  line-height: 70.31px;
-  font-weight: 400;
+  line-height: 71.1px;
   margin-block: 30px 16px;
 }
 h1 + p {
@@ -221,7 +222,6 @@ blockquote {
 }
 blockquote h3 {
   margin-block: 16px;
-  font-size: 24px;
   line-height: 32px;
   color: var(--gray40);
 }
@@ -306,13 +306,12 @@ form input {
   border-radius: 90px;
   padding-block: 12px;
   padding-inline: 16px;
-  color: var(--gray20);
   margin-block-end: 16px;
   block-size: 48px;
   inline-size: 100%;
 }
 form input::-webkit-input-placeholder {
-  color: var(--gray20);
+  color: var(--gray40);
 }
 form input[type="submit"] {
   border: none;
@@ -339,7 +338,7 @@ footer img {
   margin-inline: 11px;
 }
 .wrapper {
-  max-inline-size: 902px;
+  max-inline-size: 903px;
   margin: auto;
 }
 .main-content {
@@ -394,10 +393,6 @@ footer img {
     margin-inline-end: 200px;
   }
 
-  h1 {
-    font-size: 55px;
-    margin-block: 45px 16px;
-  }
   hr {
     margin-block: 64px;
   }
