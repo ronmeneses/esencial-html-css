@@ -69,16 +69,18 @@ header {
   margin-block: 0;
 }
 .variantes a {
+  box-sizing: border-box;
   display: block;
-  margin-block: 8px;
+  font-weight: 500;
+  inline-size: 188px;
   padding: 8px;
-  color: var(--gray10);
+  color: #808080;
   text-decoration: none;
 }
 .variantes a:first-of-type {
   margin-block-start: 16px;
 }
-.variantes a:nth-of-type(4) {
+.variantes a:nth-of-type(1) {
   background-color: var(--gray40);
   border-radius: 4px;
   color: white;
@@ -211,8 +213,10 @@ pre {
 .no-Num h3 {
   margin-block: 40px 16px;
 }
-.no-Num ol {
+.no-Num ol,
+.no-Num ul {
   margin-block: 16px 40px;
+  padding-inline-start: 18px;
 }
 .no-Num ul li {
   margin-block: 16px;
@@ -246,12 +250,16 @@ pre {
   background-color: var(--gray20);
 }
 section + p {
+  margin-block: 40px;
   text-align: center;
 }
 .form {
   margin-block: 40px 40px;
   margin-inline-start: 3px;
   position: relative;
+}
+.form h3 {
+  margin-block: 16px;
 }
 
 form input {
@@ -335,10 +343,6 @@ footer img {
     padding-inline-start: 0;
     position: absolute;
     inset-inline-start: -190px;
-  }
-  .header {
-    /* position: sticky;
-    inset-block-start: -35px; */
   }
   .header-content {
     position: relative;
