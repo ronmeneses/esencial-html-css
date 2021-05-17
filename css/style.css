@@ -55,11 +55,13 @@ body {
   block-size: 100px;
 }
 header {
-  inline-size: 208px;
   margin-block-start: 30px;
-  padding-inline-start: 16px;
+  padding-inline: 16px;
   color: var(--gray10);
   font-size: 14px;
+}
+header nav {
+  display: none;
 }
 .variantes {
   color: var(--gray10);
@@ -72,10 +74,12 @@ header {
   box-sizing: border-box;
   display: block;
   font-weight: 500;
-  inline-size: 188px;
   padding: 8px;
   color: #808080;
   text-decoration: none;
+}
+.variantes a:hover {
+  color: var(--gray20);
 }
 .variantes a:first-of-type {
   margin-block-start: 16px;
@@ -85,7 +89,6 @@ header {
   border-radius: 4px;
   color: white;
 }
-
 nav a {
   color: var(--gray10);
   text-decoration: none;
@@ -104,9 +107,21 @@ nav details summary {
   font-weight: bold;
   cursor: pointer;
   outline: none;
+  list-style-type: none;
+}
+nav details summary::before {
+  content: url(../images/close.png);
+  margin-inline-end: 15.2px;
+}
+nav details[open] summary::before {
+  content: url(../images/open.png);
 }
 details:last-of-type {
   margin-block-start: 24px;
+}
+nav ol {
+  padding-inline-start: 15px;
+  margin-block: 16px 24px;
 }
 nav ol li {
   margin-block: 16px;
@@ -316,9 +331,15 @@ footer img {
 .main-content {
   padding-inline: 16px;
 }
+/* Móviles en vertical */
+@media screen and (min-width: 425px) {
+  .variantes a {
+    text-align: center;
+  }
+}
 
 /*Móviles en horizontal o tablets en vertical*/
-@media screen and (min-width: 776px) {
+@media screen and (min-width: 768px) {
   .place {
     block-size: 150px;
   }
@@ -339,21 +360,31 @@ footer img {
     block-size: 250px;
   }
   header {
-    margin-block-start: 45px;
-    padding-inline-start: 0;
+    inline-size: 188px;
+    margin-block-start: 64px;
+    padding-inline: 0;
     position: absolute;
     inset-inline-start: -190px;
+  }
+  header nav {
+    display: block;
+  }
+  .variantes a {
+    text-align: start;
   }
   .header-content {
     position: relative;
   }
   .wrapper {
-    margin-inline-start: 200px;
+    margin-inline-start: 25.5%;
   }
-
+  .main-content {
+    padding-inline-start: 44px;
+    padding-inline-end: 52px;
+  }
   h1 {
     font-size: 55px;
-    margin-block: 45px 16px;
+    margin-block: 64px 16px;
   }
   hr {
     margin-block: 64px;
@@ -385,9 +416,6 @@ footer img {
   }
   .header-content {
     position: relative;
-  }
-  .wrapper {
-    margin: auto;
   }
   h1 {
     font-size: 60px;
