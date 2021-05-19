@@ -65,7 +65,7 @@ header nav {
 }
 .variantes {
   color: var(--gray10);
-  margin-block-end: 104px;
+  margin-block-end: 48px;
 }
 .variantes p {
   margin-block: 0;
@@ -129,8 +129,8 @@ nav ol li {
 
 h1 {
   color: var(--gray40);
-  font-size: 50px;
-  line-height: 70.31px;
+  font-size: 24px;
+  line-height: 28.13px;
   font-weight: 400;
   margin-block: 30px 16px;
 }
@@ -143,28 +143,32 @@ hr {
 }
 h2 {
   color: var(--gray40);
-  font-size: 32px;
+  font-size: 24px;
   /* 32px/16px=2rem a diferencia de em, rem toma el tamaño base al 
   padre mas grande del DOM en este caso al html que tiene por defecto 16pxs*/
   font-weight: normal;
-  line-height: 37.5px;
-  margin-block: 40px 40px;
+  line-height: 28.13px;
+  margin-block: 40px 24px;
+}
+#h2-Slider {
+  color: var(--gray20);
+  margin-block: 24px 16px;
 }
 h3 {
   font-weight: normal;
-  font-size: 24px;
-  line-height: 28.13px;
+  font-size: 20px;
+  line-height: 23.44px;
 }
 span {
   font-weight: 700;
   font-style: italic;
 }
 .section img {
-  margin-block: 40px 16px;
+  margin-block: 24px 16px;
   display: block;
 }
 .section h3 {
-  margin-block: 40px 24px;
+  margin-block: 24px 16px;
   counter-increment: namberLvl3; /* incrementamos el contdor namberLvl3 */
   position: relative;
   padding-block-end: 8px;
@@ -195,18 +199,21 @@ blockquote + hr {
   display: none;
 }
 blockquote {
-  font-size: 24px;
-  line-height: 32px;
   color: var(--gray20);
-  margin-block: 32px 64px;
+  line-height: 32px;
+  margin-block: 40px;
   margin-inline: 0;
   border-inline-start: 4px solid var(--gray40);
   padding-inline-start: 16px;
 }
-blockquote h3:last-of-type {
+blockquote p {
+  text-align: start;
+  margin-block: 4px;
+}
+blockquote p:last-of-type {
   color: var(--gray10);
 }
-blockquote h3 + h3::before {
+blockquote p + p::before {
   content: "-";
 }
 pre {
@@ -219,18 +226,18 @@ pre {
   overflow: auto;
 }
 .conceptos img {
-  margin-block: 16px 40px;
+  margin-block: 16px 24px;
   inline-size: 100%;
 }
-.conceptos img:last-of-type {
+/* .conceptos img:last-of-type {
   margin-block: 16px 40px;
-}
+} */
 .no-Num h3 {
-  margin-block: 40px 16px;
+  margin-block: 24px 16px;
 }
 .no-Num ol,
 .no-Num ul {
-  margin-block: 16px 40px;
+  /* margin-block: 16px 24px; */
   padding-inline-start: 18px;
 }
 .no-Num ul li {
@@ -256,8 +263,8 @@ pre {
 }
 .slider-bullet {
   display: inline-block;
-  block-size: 15px;
-  inline-size: 15px;
+  block-size: 16px;
+  inline-size: 16px;
   background: rgba(66, 66, 66, 0.2);
   border-radius: 50%;
 }
@@ -269,7 +276,7 @@ section + p {
   text-align: center;
 }
 .form {
-  margin-block: 40px 40px;
+  margin-block: 40px 24px;
   margin-inline-start: 3px;
   position: relative;
 }
@@ -299,10 +306,11 @@ form input[type="submit"] {
   border: none;
   color: white;
   background: #000000;
-  /* position: absolute; */
-  /* inline-size: 119px; */
+  position: absolute;
+  margin-block-end: 0;
+  inline-size: 115px;
   /* inset-inline-start: 516px; */
-  /* inset-inline-start: 0px; */
+  inset-inline-end: 0px;
   /* inset-block-end: 0; */
   cursor: pointer;
 }
@@ -353,6 +361,9 @@ footer img {
     inline-size: 119px;
     inset-inline-start: 520px;
   }
+  .form {
+    margin-block-end: 113px;
+  }
 }
 /*Tablets en horizonal y escritorios normales*/
 @media screen and (min-width: 1024px) {
@@ -369,6 +380,9 @@ footer img {
   header nav {
     display: block;
   }
+  .variantes {
+    margin-block-end: 104px;
+  }
   .variantes a {
     text-align: start;
   }
@@ -383,23 +397,48 @@ footer img {
     padding-inline-end: 52px;
   }
   h1 {
-    font-size: 55px;
+    font-size: 60px;
+    line-height: 70.31px;
     margin-block: 64px 16px;
   }
   hr {
     margin-block: 64px;
   }
   h2 {
+    font-size: 32px;
+    line-height: 37.5px;
     margin-block: 64px 40px;
   }
+  #h2-Slider {
+    font-size: 24px;
+    line-height: 28.13px;
+    /* margin-block-start: 40px; */
+  }
+  h3 {
+    font-size: 24px;
+    line-height: 28.13px;
+  }
+  .section h3 {
+    margin-block: 40px 16px;
+  }
   .conceptos img:last-of-type {
-    margin-block: 16px 164px;
+    margin-block: 16px 156px;
+  }
+  blockquote {
+    font-size: 24px;
+    margin-block: 32px 64px;
+  }
+  blockquote p {
+    margin-block: 16px;
   }
   section + p {
     text-align: start;
   }
-  .form {
-    margin-block: 40px 113px;
+  .no-Num h3 {
+    margin-block: 40px 16px;
+  }
+  .no-Num ul {
+    margin-block: 16px 40px;
   }
 }
 
@@ -417,8 +456,7 @@ footer img {
   .header-content {
     position: relative;
   }
-  h1 {
-    font-size: 60px;
-    margin-block: 64px 16px;
+  .main-content {
+    padding-inline-end: 0;
   }
 }
