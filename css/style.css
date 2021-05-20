@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: charter;
   src: url(../fonts/charter-regular.otf);
   font-style: normal;
@@ -9,7 +9,7 @@
   src: url(../fonts/charter-italic.otf);
   font-style: italic;
   font-weight: 400;
-  /* el font-weight: 400; es igual que poner normal */
+  el font-weight: 400; es igual que poner normal
 }
 @font-face {
   font-family: charter;
@@ -22,13 +22,13 @@
   src: url(../fonts/charter-bold-italic.otf);
   font-style: italic;
   font-weight: 700;
-  /* font-weight: 700; es igual que poner bold */
-}
+  font-weight: 700; es igual que poner bold
+} */
 :root {
   /* font-family: charter; */
   font-family: "Nunito", sans-serif;
   color: var(--gray10);
-  font-size: 16px;
+  font-size: 17px;
   --gray40: #251f24;
   --gray30: #3a3539;
   --gray20: #a5a3a5;
