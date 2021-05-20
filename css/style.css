@@ -49,6 +49,7 @@ body {
   /* background-position: left 30px bottom 50px; */
   /* background-size: cover; */
   block-size: 350px;
+  block-size: 96px;
 }
 header {
   color: var(--gray10);
@@ -295,7 +296,7 @@ footer img {
    ------------------------------------------------------------------------- / */
 @media screen and (min-width: 768px) {
   .place {
-    block-size: 70px;
+    block-size: 150px;
   }
 }
 
@@ -303,7 +304,7 @@ footer img {
    ------------------------------------------------------------------------- / */
 @media screen and (min-width: 1024px) {
   .place {
-    block-size: 150px;
+    block-size: 350px;
   }
   h1 {
     font-size: 50px;
@@ -319,9 +320,6 @@ footer img {
 /* / Escritorios muy anchos
    ------------------------------------------------------------------------- */
 @media screen and (min-width: 1350px) {
-  .place {
-    block-size: 350px;
-  }
   .header {
     position: sticky;
     inset-block-start: -5px;
