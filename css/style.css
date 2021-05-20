@@ -52,57 +52,56 @@ body {
   block-size: 96px;
 }
 header {
-  color: var(--gray10);
   font-size: 14px;
-  /* inline-size: 208px; */
+  padding-inline: 27px;
+  /* inline-size: 306px; */
   /* position: absolute; */
   /* inset-block-start: 0px; */
   /* inset-inline-start: -208px; */
 }
+
 nav p {
   color: var(--gray10);
+  font-weight: 700;
 }
 .variantes {
-  color: var(--gray10);
-  margin-block-end: 104px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  margin-block-end: 40px;
 }
 .variantes p {
-  margin-block: 0;
+  color: var(--gray10);
+  margin-block-end: 0;
 }
 .variantes a {
   display: block;
   margin-block: 8px;
   padding: 8px;
-  color: var(--gray10);
+  color: var(--gray20);
   text-decoration: none;
+}
+.variantes a:hover,
+nav a:hover {
+  color: var(--gray10);
 }
 .variantes a:first-of-type {
   margin-block-start: 16px;
 }
-.variantes a:nth-of-type(4) {
-  background-color: var(--gray40);
+.variantes a:nth-of-type(2) {
+  background-color: black;
   border-radius: 4px;
   color: white;
 }
-
-nav a {
-  color: var(--gray40);
-  text-decoration: none;
+header nav {
+  display: none;
 }
-nav a:hover {
-  color: var(--gray40);
+nav a {
+  color: var(--gray20);
+  text-decoration: none;
 }
 p {
   color: var(--gray20);
-  font-size: 17px;
-  margin-block: 16px;
-}
-nav a {
-  color: var(--gray20);
-  text-decoration: none;
-}
-nav a:hover {
-  color: var(--gray10);
+  margin-block: 16px 24px;
 }
 nav details summary {
   font-weight: bold;
@@ -228,13 +227,11 @@ ul li::marker {
   margin-block: 40px 16px;
 }
 .wrapper {
-  /* outline: 2px solid yellow; */
-  max-inline-size: 902px;
+  max-inline-size: 636px;
   margin: auto;
 }
 .main-content {
   padding-inline: 16px;
-  /* outline: 3px solid blue; */
 }
 .slider-container {
   display: block;
@@ -328,6 +325,13 @@ footer img {
   .place {
     block-size: 150px;
   }
+  .variantes p {
+    font-weight: 400;
+    margin-block-start: 36px;
+  }
+  .variantes a {
+    text-align: center;
+  }
 }
 
 /* / Tablets en horizonal y escritorios normales
@@ -335,6 +339,33 @@ footer img {
 @media screen and (min-width: 1024px) {
   .place {
     block-size: 350px;
+  }
+  .header-content {
+    position: relative;
+  }
+  header {
+    inline-size: 306px;
+    padding-inline: 0;
+    position: absolute;
+    inset-inline-start: 0;
+    inset-inline-start: -330px;
+  }
+  header nav {
+    display: block;
+    inline-size: 197px;
+  }
+  .variantes {
+    font-weight: 500;
+    margin-block-end: 104px;
+  }
+  .variantes p {
+    margin-block-start: 64px;
+  }
+  .variantes a {
+    text-align: start;
+  }
+  .wrapper {
+    margin-inline-start: 39%;
   }
   h1 {
     font-size: 50px;
@@ -350,26 +381,26 @@ footer img {
 /* / Escritorios muy anchos
    ------------------------------------------------------------------------- */
 @media screen and (min-width: 1350px) {
-  .header {
+  /* .header {
     position: sticky;
     inset-block-start: -5px;
-  }
-  .header-content {
+  } */
+  /* .header-content {
     padding-inline: 0px;
     position: relative;
     margin-block-start: 64px;
-  }
-  header {
+  } */
+  /* header {
     inline-size: 208px;
     position: absolute;
-    /* inset-block-start: 0px; */
+    inset-block-start: 0px;
     inset-inline-start: -208px;
-  }
-  h1 {
+  } */
+  /* h1 {
     font-size: 4rem;
     margin-block: 64px 16px;
-  }
-  h3 {
+  } */
+  /* h3 {
     font-size: 2rem;
-  }
+  } */
 }
