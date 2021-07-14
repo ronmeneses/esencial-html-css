@@ -99,38 +99,57 @@ nav a {
   color: var(--gray20);
   text-decoration: none;
 }
-p {
-  color: var(--gray20);
-  margin-block: 16px 24px;
-}
 nav details summary {
   font-weight: bold;
   cursor: pointer;
+  list-style-type: none;
   margin-block-start: 24px;
   outline: none;
+}
+nav details summary::before {
+  content: url(../images/close.png);
+  margin-inline-end: 15.2px;
+}
+nav details[open] summary::before {
+  content: url(../images/open.png);
+}
+details ol {
+  padding-inline-start: 48px;
 }
 nav ol li {
   margin-block: 16px;
 }
 h1 {
-  font-size: 40px;
-  line-height: 87.3px;
-  margin-block: 20px 16px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32.74px;
+  margin-block: 40px 24px;
+}
+.h1 {
+  margin-block-end: 16px;
+}
+p {
+  color: var(--gray20);
+  font-weight: 700;
+  text-align: justify;
+  margin-block: 16px;
 }
 h2 {
-  font-size: 35px;
-  line-height: 54.56px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32.74px;
   /* 32px/16px=2rem a diferencia de em, rem toma el tamaño base al 
   padre mas grande del DOM en este caso al html que tiene por defecto 16pxs*/
+}
+span {
+  font-weight: 800;
 }
 h3 {
   font-size: 25px;
   font-weight: 600;
   line-height: 43.65px;
 }
-span {
-  font-weight: 700;
-}
+
 hr {
   border: 1px solid rgba(97, 97, 97, 0.2);
   margin-block: 40px;
@@ -356,7 +375,7 @@ footer img {
   }
   .variantes {
     font-weight: 500;
-    margin-block-end: 104px;
+    margin-block-end: 96px;
   }
   .variantes p {
     margin-block-start: 64px;
@@ -367,12 +386,25 @@ footer img {
   .wrapper {
     margin-inline-start: 39%;
   }
+  .h1 {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 87.3px;
+    margin-block-start: 64px;
+  }
+  p {
+    font-weight: 400;
+  }
   h1 {
-    font-size: 50px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 54.56px;
+    margin-block-end: 40px;
   }
-  h2 {
-    font-size: 2.5rem;
+  span {
+    font-weight: 700;
   }
+
   section + p {
     text-align: start;
   }
