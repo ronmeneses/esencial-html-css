@@ -211,10 +211,14 @@ blockquote + hr {
 .modeloDeCaja ol,
 .modeloDeCaja ul {
   color: var(--gray20);
-  font-size: 17px;
+  padding-inline-start: 18px;
+}
+.modeloDeCaja ol li {
+  font-weight: 700;
 }
 .modeloDeCaja ul li {
   margin-block: 16px;
+  font-weight: 700;
 }
 pre {
   background-color: var(--gray30);
@@ -454,6 +458,10 @@ footer img {
     font-weight: 400;
     padding-inline: 40px;
     padding-block: 40px;
+  }
+  .modeloDeCaja ol li,
+  .modeloDeCaja ul li {
+    font-weight: 400;
   }
 
   section + p {
