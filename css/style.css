@@ -124,7 +124,6 @@ h1 {
   line-height: 32.74px;
   margin-block: 40px 16px;
 }
-
 p {
   color: var(--gray20);
   font-weight: 700;
@@ -151,14 +150,35 @@ hr {
   margin-block: 16px 24px;
 }
 h2 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
-  line-height: 32.74px;
+  line-height: 27.28px;
   margin-block: 24px 16px;
   /* 32px/16px=2rem a diferencia de em, rem toma el tamaño base al 
   padre mas grande del DOM en este caso al html que tiene por defecto 16pxs*/
 }
+/* La numeracion con css para cada una de nuestras secciones */
+/* reseteamos el contador en cada seccion para que inicie desde 1*/
+.setup {
+  counter-reset: namberLvl3;
+}
+/* incrementamos el contdor namberLvl3 */
+.setup h2 {
+  counter-increment: namberLvl3;
+  margin-block-start: 16px;
+}
+.setup > h2::before {
+  content: counter(namberLvl3) ". ";
+  /* content: counter(namberLvl3, upper-roman) ".-"; contar en romanos*/
+}
+.modeloDeCaja h2:nth-of-type(1),
+.slider > h2 {
+  font-weight: 700;
+}
 
+ul li::marker {
+  color: var(--gray10);
+}
 h3 {
   font-size: 25px;
   font-weight: 600;
@@ -215,23 +235,7 @@ pre {
   padding-block: 40px;
   overflow: auto;
 }
-ul li::marker {
-  color: var(--gray10);
-}
 
-/* La numeracion con css para cada una de nuestras secciones */
-/* reseteamos el contador en cada seccion para que inicie desde 1*/
-.seccion {
-  counter-reset: namberLvl3;
-}
-/* incrementamos el contdor namberLvl3 */
-.seccion h3 {
-  counter-increment: namberLvl3;
-}
-.seccion > h3::before {
-  content: counter(namberLvl3) ". ";
-  /* content: counter(namberLvl3, upper-roman) ".-"; contar en romanos*/
-}
 /* .setup > h3::after,
 .conceptos > h3::after {
   content: "";
@@ -289,12 +293,6 @@ section + p {
 section + p a {
   font-family: "Roboto", sans-serif;
 }
-
-.form h2 {
-  font-size: 24px;
-  line-height: 32.74px;
-  margin-block: 16px;
-}
 .form input {
   font-family: "Nunito", sans-serif;
   font-size: 16px;
@@ -329,6 +327,8 @@ footer {
 }
 footer h2 {
   color: var(--gray40);
+  font-size: 24px;
+  line-height: 28.13px;
   margin-block: 0;
   margin-block-end: 19px;
 }
@@ -421,6 +421,25 @@ footer img {
   .conceptos img {
     margin-block-end: 40px;
   }
+  h2 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 43.65px;
+    margin-block-start: 40px;
+  }
+  .modeloDeCaja h2:first-of-type,
+  .slider h2,
+  .form h2 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32.74px;
+  }
+  footer h2 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 43.65px;
+  }
+
   section + p {
     text-align: start;
   }
