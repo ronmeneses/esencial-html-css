@@ -122,10 +122,7 @@ h1 {
   font-size: 24px;
   font-weight: 400;
   line-height: 32.74px;
-  margin-block: 40px 24px;
-}
-.h1 {
-  margin-block-end: 16px;
+  margin-block: 40px 16px;
 }
 p {
   color: var(--gray20);
@@ -137,6 +134,7 @@ h2 {
   font-size: 24px;
   font-weight: 400;
   line-height: 32.74px;
+  margin-block: 24px 16px;
   /* 32px/16px=2rem a diferencia de em, rem toma el tamaño base al 
   padre mas grande del DOM en este caso al html que tiene por defecto 16pxs*/
 }
@@ -385,20 +383,25 @@ footer img {
   .wrapper {
     margin-inline-start: 39%;
   }
-  .h1 {
+  p {
+    font-weight: 400;
+  }
+  .main-content > h1:first-of-type {
     font-size: 64px;
     font-weight: 700;
     line-height: 87.3px;
-    margin-block-start: 64px;
-  }
-  p {
-    font-weight: 400;
+    margin-block: 64px 16px;
   }
   h1 {
     font-size: 40px;
     font-weight: 700;
     line-height: 54.56px;
     margin-block-end: 40px;
+  }
+  .modeloDeCaja > h1:nth-of-type(1) {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 43.65px;
   }
   span {
     font-weight: 700;
