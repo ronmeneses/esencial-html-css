@@ -279,8 +279,12 @@ ul li::marker {
   background: var(--gray10);
 }
 section + p {
+  font-weight: 400;
   margin-block: 51px 40px;
   text-align: center;
+}
+section + p a {
+  font-family: "Roboto", sans-serif;
 }
 
 .form h2 {
@@ -383,9 +387,7 @@ footer img {
   .wrapper {
     margin-inline-start: 39%;
   }
-  p {
-    font-weight: 400;
-  }
+
   .main-content > h1:first-of-type {
     font-size: 64px;
     font-weight: 700;
@@ -402,6 +404,9 @@ footer img {
     font-size: 32px;
     font-weight: 600;
     line-height: 43.65px;
+  }
+  p {
+    font-weight: 400;
   }
   span {
     font-weight: 700;
