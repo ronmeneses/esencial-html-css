@@ -124,11 +124,31 @@ h1 {
   line-height: 32.74px;
   margin-block: 40px 16px;
 }
+
 p {
   color: var(--gray20);
   font-weight: 700;
   text-align: justify;
   margin-block: 16px;
+}
+span {
+  font-weight: 800;
+}
+hr {
+  border: 1px solid rgba(97, 97, 97, 0.2);
+  margin-block: 40px;
+}
+.setup img,
+.conceptos img {
+  /* margin-block: 24px 16px; */
+  display: block;
+  max-inline-size: 100%;
+}
+.setup img {
+  margin-block: 24px 16px;
+}
+.conceptos img {
+  margin-block: 16px 24px;
 }
 h2 {
   font-size: 24px;
@@ -138,19 +158,13 @@ h2 {
   /* 32px/16px=2rem a diferencia de em, rem toma el tamaño base al 
   padre mas grande del DOM en este caso al html que tiene por defecto 16pxs*/
 }
-span {
-  font-weight: 800;
-}
+
 h3 {
   font-size: 25px;
   font-weight: 600;
   line-height: 43.65px;
 }
 
-hr {
-  border: 1px solid rgba(97, 97, 97, 0.2);
-  margin-block: 40px;
-}
 blockquote {
   background: var(--gray30);
   margin-block: 80px 63px;
@@ -169,22 +183,11 @@ blockquote > p + p::before {
 blockquote + hr {
   display: none;
 }
-.seccion img {
-  margin-block: 40px 16px;
-  display: block;
-}
 .seccion h3 {
   margin-block: 40px 16px;
 }
 .setup > h3 {
   margin-block: 16px;
-}
-.conceptos img,
-.modeloDeCaja img {
-  max-inline-size: 100%;
-}
-.conceptos img:last-of-type {
-  margin-block: 16px 122px;
 }
 .modeloDeCaja ol,
 .modeloDeCaja ul {
@@ -404,6 +407,7 @@ footer img {
     font-size: 32px;
     font-weight: 600;
     line-height: 43.65px;
+    margin-block-start: 122px;
   }
   p {
     font-weight: 400;
@@ -411,7 +415,12 @@ footer img {
   span {
     font-weight: 700;
   }
-
+  .setup img {
+    margin-block-start: 40px;
+  }
+  .conceptos img {
+    margin-block-end: 40px;
+  }
   section + p {
     text-align: start;
   }
