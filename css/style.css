@@ -187,14 +187,13 @@ h3 {
 
 blockquote {
   background: var(--gray30);
-  margin-block: 80px 63px;
   border-radius: 8px;
-  padding-inline: 24px 17px;
-  padding-block: 24px;
+  margin-block: 40px;
+  margin-inline: 0;
+  padding: 8px;
 }
 blockquote p {
   color: var(--gray10);
-  font-size: 24px;
   line-height: 32px;
 }
 blockquote > p + p::before {
@@ -220,19 +219,22 @@ blockquote + hr {
 pre {
   background-color: var(--gray30);
   /* border: 8px solid #5551ff; */
-  border-inline: 8px solid #5551ff;
-  border-block: 8px solid #5551ff;
+  /* border-inline: 8px solid #5551ff; */
+  /* border-block: 8px solid #5551ff; */
   /* border-inline-end-width: 15px; */
   /* border-inline-end-color: violet; */
   border-start-start-radius: 8px;
   border-start-end-radius: 8px;
   border-end-start-radius: 8px;
   border-end-end-radius: 8px;
-  box-shadow: -10px 10px 0 0 #abaaf6;
+  /* box-shadow: -10px 10px 0 0 #abaaf6; */
   /* border-radius: 8px; */
   font-family: "Nunito", sans-serif;
-  padding-inline: 40px 85px;
-  padding-block: 40px;
+  font-size: 16px;
+  font-weight: 700;
+  margin-block: 16px 24px;
+  padding-inline: 16px;
+  padding-block: 16px;
   overflow: auto;
 }
 
@@ -438,6 +440,20 @@ footer img {
     font-size: 32px;
     font-weight: 400;
     line-height: 43.65px;
+  }
+  blockquote {
+    margin-block: 80px 63px;
+    padding-inline: 24px 17px;
+    padding-block: 24px;
+  }
+  blockquote p {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  pre {
+    font-weight: 400;
+    padding-inline: 40px;
+    padding-block: 40px;
   }
 
   section + p {
