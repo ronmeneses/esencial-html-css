@@ -361,6 +361,9 @@ footer img {
   .variantes a {
     text-align: center;
   }
+  pre {
+    overflow: hidden;
+  }
 }
 
 /* / Tablets en horizonal y escritorios normales
