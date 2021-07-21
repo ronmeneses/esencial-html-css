@@ -110,8 +110,12 @@ nav details summary {
   list-style-type: none;
 }
 nav details summary::before {
+  block-size: 24px;
+  display: inline-block;
   content: url(../images/close.png);
-  margin-inline-end: 15.2px;
+  inline-size: 24px;
+  margin-inline-end: 8px;
+  margin-block-start: 2px;
 }
 nav details[open] summary::before {
   content: url(../images/open.png);
@@ -122,6 +126,16 @@ details:last-of-type {
 nav ol {
   padding-inline-start: 15px;
   margin-block: 16px 24px;
+}
+details summary p {
+  display: inline-block;
+  inline-size: 153px;
+  margin: 0;
+  text-align: start;
+  vertical-align: top;
+}
+details ol {
+  padding-inline-start: 48px;
 }
 nav ol li {
   margin-block: 16px;
@@ -371,7 +385,7 @@ footer img {
     block-size: 250px;
   }
   header {
-    inline-size: 188px;
+    /* inline-size: 188px; */
     margin-block-start: 64px;
     padding-inline: 0;
     position: absolute;
