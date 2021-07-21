@@ -106,11 +106,22 @@ nav details summary {
   outline: none;
 }
 nav details summary::before {
+  block-size: 24px;
+  display: inline-block;
   content: url(../images/close.png);
-  margin-inline-end: 15.2px;
+  inline-size: 24px;
+  margin-inline-end: 8px;
+  margin-block-start: 2px;
 }
 nav details[open] summary::before {
   content: url(../images/open.png);
+}
+details summary p {
+  display: inline-block;
+  inline-size: 165px;
+  margin: 0;
+  text-align: start;
+  vertical-align: top;
 }
 details ol {
   padding-inline-start: 48px;
@@ -384,7 +395,7 @@ footer img {
   }
   header nav {
     display: block;
-    inline-size: 197px;
+    /* inline-size: 197px; */
   }
   .variantes {
     font-weight: 500;
@@ -466,7 +477,6 @@ footer img {
   .modeloDeCaja ul li {
     font-weight: 400;
   }
-
   section + p {
     text-align: start;
   }
