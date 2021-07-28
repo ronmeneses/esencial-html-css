@@ -1,0 +1,58 @@
+.wrapper {
+  color: var(--graySecundary);
+  max-inline-size: 60.38rem;
+  min-inline-size: 20.5rem;
+  padding-inline: 1rem;
+  margin: auto;
+}
+h1 {
+  color: var(--grayPrimary);
+  font: 2rem/2.34rem var(--fontFamilyC);
+  margin-block: 2.5rem 1.5rem;
+}
+main > h1 {
+  margin-block-end: 1rem;
+}
+.conceptos > h1 {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+main > h1 + p {
+  color: var(--grayPrimary);
+}
+p {
+  font: 1rem/1.5rem var(--fontFamilyC);
+  text-align: justify;
+  margin-block: 1rem;
+}
+.setup h1 {
+  display: none;
+}
+
+.conceptos img {
+  inline-size: 100%;
+}
+pre {
+  background: #e5e5e5;
+  font-family: var(--fontFamilyC);
+  padding-inline: 1rem;
+  padding-block: 1rem;
+  overflow: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  main > h1 {
+    font-size: 3.75rem;
+    line-height: 4.39rem;
+    margin-block-start: 5rem;
+  }
+  .setup h1 {
+    display: block;
+  }
+  .conceptos h1 {
+    font: normal 400 2rem/2.34rem;
+    /* font-size: 2rem; */
+    /* line-height: 2.34rem; */
+    /* 2rem/2.34rem */
+  }
+}
