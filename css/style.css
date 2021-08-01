@@ -1,10 +1,13 @@
 @import url("./nemiumC.css");
 @import url("./variantes.css");
 @import url("./slider.css");
+@import url("./header.css");
 
 :root {
   --grayPrimary: #212121;
-  --graySecundary: #424242;
+  --graySecondary: #424242;
+  --grayHeaderPrimaryC: #616161;
+  --grayHeaderSecondaryC: #c4c4c4;
   --fontFamilyC: "Roboto", sans-serif;
 }
 html {

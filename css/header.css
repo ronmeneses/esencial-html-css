@@ -1,0 +1,83 @@
+.header-content p,
+.header-content a {
+  --colorSelectC: #ffffff;
+  --bgSelectC: #000000;
+  color: var(--grayHeaderPrimaryC);
+  text-decoration: none;
+  font: 0.88rem /1.5rem var(--fontFamilyC);
+  text-align: start;
+}
+.header-content a:hover,
+li:hover {
+  color: var(--grayHeaderSecondaryC);
+}
+.variantes {
+  margin-block: 2.5rem;
+}
+.variantes a {
+  display: block;
+  font-weight: 500;
+  padding: 0.5rem;
+}
+.variantes a:nth-of-type(3) {
+  color: var(--colorSelectC);
+  background: var(--bgSelectC);
+  border-radius: 0.25rem;
+}
+.navegation {
+  margin-block-end: 7.38rem;
+}
+.content-nav {
+  border-inline-start: 0.25rem solid var(--grayHeaderSecondaryC);
+  padding-inline-start: 1rem;
+}
+summary + ol {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+summary + ol > li {
+  counter-increment: namber;
+  margin-block: 1rem;
+}
+summary + ol > li::before {
+  content: counter(namber) ". ";
+}
+.navegation summary p {
+  cursor: pointer;
+  font-weight: 700;
+}
+details summary {
+  list-style-type: none;
+}
+@media screen and (min-width: 425px) {
+  .variantes a {
+    text-align: center;
+  }
+  details ol {
+    text-align: center;
+  }
+  .content-nav {
+    border-inline-start: none;
+    padding-inline-start: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .variantes a {
+    text-align: start;
+  }
+  .wrapper-header {
+    inline-size: 17.5rem;
+  }
+  details ol {
+    text-align: start;
+  }
+  .content-nav {
+    border-inline-start: 0.25rem solid var(--grayHeaderSecondaryC);
+    padding-inline-start: 1rem;
+  }
+}
+@media screen and (min-width: 64rem) {
+  .navegation {
+    margin-block: 6.5rem 4rem;
+  }
+}

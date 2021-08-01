@@ -19,6 +19,6 @@
   display: inline-block;
   block-size: 15px;
   inline-size: 15px;
-  background: var(--graySecundary);
+  background: var(--graySecondary);
   border-radius: 50%;
 }

@@ -1,5 +1,5 @@
 .wrapper {
-  color: var(--graySecundary);
+  color: var(--graySecondary);
   max-inline-size: 60.38rem;
   min-inline-size: 20.5rem;
   padding-inline: 1rem;
@@ -13,6 +13,7 @@ h1 {
 main > h1 {
   margin-block-end: 1rem;
 }
+
 .conceptos > h1 {
   font-size: 1.5rem;
   line-height: 1.75rem;
@@ -20,10 +21,15 @@ main > h1 {
 main > h1 + p {
   color: var(--grayPrimary);
 }
-p {
-  font: 1rem/1.5rem var(--fontFamilyC);
+p,
+ol,
+ul {
+  font: 1rem /1.5rem var(--fontFamilyC);
   text-align: justify;
   margin-block: 1rem;
+}
+hr:nth-of-type(1) {
+  display: none;
 }
 .setup h1 {
   display: none;
@@ -40,19 +46,23 @@ pre {
   overflow: auto;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64rem) {
   main > h1 {
     font-size: 3.75rem;
     line-height: 4.39rem;
     margin-block-start: 5rem;
   }
+  main > h1 + p {
+    margin-block-end: 4rem;
+  }
+  hr:nth-of-type(1) {
+    display: block;
+  }
   .setup h1 {
     display: block;
   }
   .conceptos h1 {
-    font: normal 400 2rem/2.34rem;
-    /* font-size: 2rem; */
-    /* line-height: 2.34rem; */
-    /* 2rem/2.34rem */
+    font-size: 2rem;
+    line-height: 2.34rem;
   }
 }
