@@ -36,7 +36,13 @@ hr {
 .setup h1 {
   display: none;
 }
-
+main img {
+  display: block;
+}
+.setup img {
+  inline-size: 3rem;
+  margin-block-start: 2.5rem;
+}
 .conceptos img {
   inline-size: 100%;
 }
@@ -62,6 +68,9 @@ pre {
   }
   .setup h1 {
     display: block;
+  }
+  .setup img {
+    inline-size: 5rem;
   }
   .conceptos h1 {
     font-size: 2rem;
