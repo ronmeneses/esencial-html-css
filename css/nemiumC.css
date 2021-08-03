@@ -28,8 +28,10 @@ ul {
   text-align: justify;
   margin-block: 1rem;
 }
-hr:nth-of-type(1) {
+hr {
+  border: 1px solid #61616133;
   display: none;
+  margin-block-end: 4rem;
 }
 .setup h1 {
   display: none;
@@ -55,7 +57,7 @@ pre {
   main > h1 + p {
     margin-block-end: 4rem;
   }
-  hr:nth-of-type(1) {
+  hr {
     display: block;
   }
   .setup h1 {
