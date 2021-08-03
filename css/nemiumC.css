@@ -46,6 +46,20 @@ main img {
 .conceptos img {
   inline-size: 100%;
 }
+h2 {
+  font: 1.25rem/1.46rem var(--fontFamilyC);
+  margin-block: 1rem;
+}
+.conceptos > h2,
+.modeloDeCaja > h2 {
+  margin-block-start: 1.5rem;
+}
+h2.h2-64rem {
+  font: var(--h2-64remC);
+}
+.form h2 {
+  margin-block-start: 2.5rem;
+}
 pre {
   background: #e5e5e5;
   font-family: var(--fontFamilyC);
@@ -75,5 +89,12 @@ pre {
   .conceptos h1 {
     font-size: 2rem;
     line-height: 2.34rem;
+  }
+  h2 {
+    font: var(--h2-64remC);
+  }
+  .conceptos > h2,
+  .modeloDeCaja > h2 {
+    margin-block-start: 2.5rem;
   }
 }

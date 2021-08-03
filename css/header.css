@@ -36,11 +36,7 @@ summary + ol {
   padding-inline-start: 0;
 }
 summary + ol > li {
-  counter-increment: namber;
   margin-block: 1rem;
-}
-summary + ol > li::before {
-  content: counter(namber) ". ";
 }
 .navegation summary p {
   cursor: pointer;

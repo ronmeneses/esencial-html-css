@@ -1,0 +1,13 @@
+/* Numerando con CSS */
+.counterIncrement {
+  /* iniciando el contador */
+  counter-increment: namber;
+}
+.counterIncrement::before {
+  /* mostrando el contandor */
+  content: counter(namber) ". ";
+}
+.resetCounter {
+  /* reiniciar el conteo */
+  counter-reset: namber;
+}

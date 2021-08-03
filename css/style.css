@@ -2,6 +2,7 @@
 @import url("./variantes.css");
 @import url("./slider.css");
 @import url("./header.css");
+@import url("./before.css");
 
 :root {
   --grayPrimary: #212121;
@@ -9,6 +10,7 @@
   --grayHeaderPrimaryC: #616161;
   --grayHeaderSecondaryC: #c4c4c4;
   --fontFamilyC: "Roboto", sans-serif;
+  --h2-64remC: 1.5rem/1.75rem var(--fontFamilyC);
 }
 html {
   scroll-behavior: smooth;
