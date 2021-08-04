@@ -74,7 +74,8 @@ h2.h2-64rem {
 }
 pre {
   background: #e5e5e5;
-  font-family: var(--fontFamilyC);
+  border-radius: 0.5rem;
+  font: 1rem /1.5rem var(--fontFamilyC);
   padding-inline: 1rem;
   padding-block: 1rem;
   overflow: auto;
@@ -122,5 +123,8 @@ pre {
   main > p {
     margin-block-start: 2.5rem;
     text-align: start;
+  }
+  pre {
+    padding: 2.5rem;
   }
 }
