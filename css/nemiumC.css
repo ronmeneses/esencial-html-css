@@ -57,6 +57,10 @@ h2 {
 h2.h2-64rem {
   font: var(--h2-64remC);
 }
+p span {
+  font-weight: 700;
+}
+
 .form h2 {
   margin-block-start: 2.5rem;
 }
