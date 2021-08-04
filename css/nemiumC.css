@@ -86,7 +86,7 @@ pre {
     text-align: center;
   }
   main > h1 + p {
-    text-align: start;
+    text-align: justify;
   }
 }
 

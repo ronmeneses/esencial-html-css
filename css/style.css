@@ -1,9 +1,8 @@
 @import url("./nemiumC.css");
-@import url("./variantes.css");
 @import url("./slider.css");
 @import url("./header.css");
 @import url("./before.css");
-
+@import url("./blockquote.css");
 :root {
   --grayPrimary: #212121;
   --graySecondary: #424242;

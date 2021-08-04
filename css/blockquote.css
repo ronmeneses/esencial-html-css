@@ -1,0 +1,17 @@
+blockquote {
+  border-inline-start: 0.25rem solid var(--grayPrimary);
+  margin-inline: 0;
+  margin-block-start: 2.5rem;
+  padding-inline-start: 1rem;
+}
+blockquote p {
+  line-height: 2rem;
+}
+blockquote p:first-of-type + p {
+  color: var(--grayHeaderPrimaryC);
+}
+@media screen and (min-width: 64rem) {
+  blockquote {
+    margin-block: 5rem;
+  }
+}

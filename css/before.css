@@ -11,3 +11,6 @@
   /* reiniciar el conteo */
   counter-reset: namber;
 }
+blockquote p:first-of-type + p::before {
+  content: "- ";
+}
