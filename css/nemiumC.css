@@ -57,7 +57,13 @@ h2 {
 h2.h2-64rem {
   font: var(--h2-64remC);
 }
-p span {
+main > p {
+  display: none;
+}
+main > p > a {
+  color: var(--graySecondary);
+}
+main p span {
   font-weight: 700;
 }
 
@@ -70,6 +76,13 @@ pre {
   padding-inline: 1rem;
   padding-block: 1rem;
   overflow: auto;
+}
+@media screen and (min-width: 48rem) {
+  main > p {
+    display: block;
+    margin-block-start: 1.5rem;
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 64rem) {
@@ -100,5 +113,9 @@ pre {
   .conceptos > h2,
   .modeloDeCaja > h2 {
     margin-block-start: 2.5rem;
+  }
+  main > p {
+    margin-block-start: 2.5rem;
+    text-align: start;
   }
 }
