@@ -8,7 +8,7 @@
   text-align: start;
 }
 .header-content a:hover,
-li:hover {
+.header-content li:hover {
   color: var(--grayHeaderSecondaryC);
 }
 .variantes {
