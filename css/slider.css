@@ -14,11 +14,15 @@
 }
 .slider-bullet-list {
   text-align: center;
+  margin-block-start: 1rem;
 }
 .slider-bullet {
   display: inline-block;
-  block-size: 15px;
-  inline-size: 15px;
-  background: var(--graySecondary);
+  block-size: 1rem;
+  inline-size: 1rem;
+  background: rgba(66, 66, 66, 0.2);
   border-radius: 50%;
+}
+.slider-bullet:first-of-type {
+  background: var(--graySecondary);
 }
