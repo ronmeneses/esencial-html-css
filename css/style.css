@@ -4,6 +4,7 @@
 @import url("./before.css");
 @import url("./blockquote.css");
 @import url("./form.css");
+@import url("./footer.css");
 :root {
   --grayPrimary: #212121;
   --graySecondary: #424242;

@@ -76,7 +76,7 @@ h2 {
 .slider > h2 {
   margin-block-start: 1.5rem;
 }
-h2.h2-64rem {
+.h2-64rem {
   font: var(--h2-64remC);
 }
 
