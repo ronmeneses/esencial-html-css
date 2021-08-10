@@ -1,0 +1,24 @@
+.place {
+  background-image: linear-gradient(
+      274.51deg,
+      rgba(74, 0, 224, 0.6) 5%,
+      rgba(142, 45, 226, 0.5) 130.61%
+    ),
+    url("../images/patron-2.png");
+  /* background-repeat: no-repeat; */
+  /* background-position: left 30px bottom 50px; */
+  /* background-size: cover; */
+  block-size: 6rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .place {
+    block-size: 15.62rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .place {
+    block-size: 21.87rem;
+  }
+}

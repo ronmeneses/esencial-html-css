@@ -1,7 +1,6 @@
 .wrapper {
   color: var(--graySecondary);
   max-inline-size: 60.38rem;
-  min-inline-size: 20.5rem;
   padding-inline: 1rem;
   margin: auto;
 }
