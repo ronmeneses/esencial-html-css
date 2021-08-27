@@ -1,31 +1,63 @@
 .header-content p,
-.header-content a {
+.header-content a,
+.header-content li {
   --colorSelectC: #ffffff;
   --bgSelectC: #000000;
+  --bgSelectD: #5551ff;
   color: var(--grayHeaderPrimaryC);
   text-decoration: none;
   font: 0.88rem /1.5rem var(--fontFamilyC);
   text-align: start;
 }
-.header-content a:hover,
-.header-content li:hover {
+.header-content a:hover {
   color: var(--grayHeaderSecondaryC);
-}
-.variantes {
-  margin-block: 2.5rem;
 }
 .variantes a {
   display: block;
   font-weight: 500;
   padding: 0.5rem;
 }
-.variantes a:nth-of-type(3) {
+.variantesC {
+  margin-block: 2.5rem;
+}
+.variantesD {
+  margin-block-end: 2.5rem;
+}
+.variantesC a:nth-of-type(3),
+.variantesD a:nth-of-type(4) {
   color: var(--colorSelectC);
   background: var(--bgSelectC);
   border-radius: 0.25rem;
 }
-.navegation {
+
+.navegation summary p {
+  cursor: pointer;
+  font-weight: 700;
+}
+.navegationD .primary50 {
+  color: #00000080;
+  margin-inline-start: -0.31rem;
+}
+.navegationC {
   margin-block-end: 7.38rem;
+}
+.navegationD p,
+.navegationD a,
+.navegationD li {
+  color: var(--colorPrimaryD);
+  font: 0.88rem /1.5rem var(--fontFamilyD);
+}
+.navegationD > p {
+  display: none;
+}
+.navegationD a {
+  display: inline-block;
+  padding: 8px;
+  inline-size: -webkit-fill-available;
+}
+.navegationD details:first-of-type ol li:nth-of-type(1) a {
+  background: var(--bgSelectD);
+  color: var(--colorSelectC);
 }
 .content-nav {
   border-inline-start: 0.25rem solid var(--grayHeaderSecondaryC);
@@ -38,28 +70,27 @@ summary + ol {
 summary + ol > li {
   margin-block: 1rem;
 }
-.navegation summary p {
-  cursor: pointer;
-  font-weight: 700;
+.navegationD summary + ol li {
+  margin-block: 0.5rem;
 }
 details summary {
   list-style-type: none;
 }
+
+/* Responsive web desing */
 @media screen and (min-width: 425px) {
-  .variantes a {
+  .variantesC a,
+  .variantesD a {
     text-align: center;
-  }
-  details ol {
-    text-align: center;
-  }
-  .content-nav {
-    border-inline-start: none;
-    padding-inline-start: 0;
   }
 }
 @media screen and (min-width: 768px) {
-  .variantes a {
+  .variantesC a,
+  .variantesD a {
     text-align: start;
+  }
+  .navegationD > p {
+    display: block;
   }
   .wrapper-header {
     inline-size: 17.5rem;
@@ -71,9 +102,17 @@ details summary {
     border-inline-start: 0.25rem solid var(--grayHeaderSecondaryC);
     padding-inline-start: 1rem;
   }
+  .wrapperD .header-content header {
+    inline-size: 13rem;
+  }
 }
 @media screen and (min-width: 64rem) {
   .navegation {
     margin-block: 6.5rem 4rem;
   }
+  .variantesD {
+    margin-block: 4rem 6.5rem;
+  }
+}
+@media screen and (min-width: 84rem) {
 }

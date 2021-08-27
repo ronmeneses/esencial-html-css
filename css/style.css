@@ -11,7 +11,10 @@
   --graySecondary: #424242;
   --grayHeaderPrimaryC: #616161;
   --grayHeaderSecondaryC: #c4c4c4;
+  --colorPrimaryD: #000000;
+  --colorSecondaryD: #545454;
   --fontFamilyC: "Roboto", sans-serif;
+  --fontFamilyD: "Rubik", sans-serif;
   --h2-64remC: 1.5rem/1.75rem var(--fontFamilyC);
 }
 html {

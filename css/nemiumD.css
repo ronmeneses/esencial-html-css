@@ -10,6 +10,14 @@
   /* background-size: cover; */
   block-size: 6rem;
 }
+.wrapperD {
+  max-inline-size: 56.43rem;
+  margin: auto;
+}
+.wrapperD .main-content,
+.wrapperD .header-content {
+  padding-inline: 1rem;
+}
 
 @media screen and (min-width: 48rem) {
   .place {
@@ -20,5 +28,15 @@
 @media screen and (min-width: 64rem) {
   .place {
     block-size: 21.87rem;
+  }
+  .wrapperD {
+    margin-inline-end: 27.5%;
+  }
+  .wrapperD .header-content {
+    position: relative;
+  }
+  .wrapperD .header-content header {
+    position: absolute;
+    inset-inline-end: -13.5rem;
   }
 }

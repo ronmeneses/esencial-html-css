@@ -14,3 +14,35 @@
 blockquote p:first-of-type + p::before {
   content: "- ";
 }
+.navegationD details summary {
+  margin-block-start: 1.5rem;
+  outline: none;
+}
+.navegationD details summary::before {
+  block-size: 1.5rem;
+  display: inline-block;
+  content: url(../images/close.png);
+  inline-size: 1.5rem;
+  margin-inline-end: 0.5rem;
+}
+.navegationD details[open] summary::before {
+  content: url(../images/open.png);
+}
+.navegationD details summary p {
+  inline-size: 15.93rem;
+  display: inline-block;
+  margin: 0;
+  text-align: start;
+  vertical-align: top;
+}
+
+@media screen and (min-width: 23.43rem) {
+  .navegationD details summary p {
+    inline-size: auto;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .navegationD details summary p {
+    inline-size: 11rem;
+  }
+}
